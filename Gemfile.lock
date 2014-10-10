@@ -64,6 +64,10 @@ GEM
       leaflet-rails
       leaflet-sidebar-rails (~> 0.0.2)
       rails
+    blacklight-marc (5.4.0)
+      blacklight (>= 5.4.0.rc1, < 6.0)
+      marc (>= 0.4.3, < 1.1)
+      rails
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     builder (3.2.2)
@@ -132,6 +136,7 @@ GEM
       request_store (~> 1.0)
     email_validator (1.4.0)
       activemodel
+    ensure_valid_encoding (0.5.3)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -174,6 +179,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    marc (0.8.2)
+      ensure_valid_encoding
+      scrub_rb (>= 1.0.1, < 2)
+      unf
     mediashelf-loggable (0.4.9)
     method_source (0.8.2)
     mime-types (1.25.1)
@@ -271,6 +280,7 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    scrub_rb (1.0.1)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     simple_form (3.1.0.rc2)
@@ -317,6 +327,9 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
     unicode_utils (1.4.0)
     unicorn (4.8.3)
       kgio (~> 2.6)
@@ -339,6 +352,7 @@ DEPENDENCIES
   awesome_print
   blacklight
   blacklight-maps
+  blacklight-marc (~> 5.0)
   capistrano (~> 2.0)
   carrierwave
   coffee-rails
