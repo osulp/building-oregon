@@ -1,7 +1,8 @@
+require 'jettywrapper'
 namespace :jetty do
   desc "Configures Jetty"
   task :config do
-    Rake:Task["jetty:stop"].invoke
+    Rake::Task["jetty:stop"].invoke
     sleep(2)
     FileUtils.rm_rf "jetty/solr/blacklight-core-test", :verbose => true
     FileUtils.mkdir_p "jetty/solr/blacklight-core-test", :verbose => true
