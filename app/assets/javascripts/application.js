@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //
 // Required by Blacklight-Maps
+//= require leaflet
+//= require leaflet.markercluster
+//= require L.Control.Sidebar
 //= require blacklight-maps
 //
 // Required by Blacklight
