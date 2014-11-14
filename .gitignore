@@ -17,3 +17,6 @@
 
 # Ignore Jetty
 /jetty
+
+# Ignore Coverage files
+/coverage
