@@ -1,0 +1,171 @@
+0    [main] INFO  org.eclipse.jetty.server.Server  – jetty-8.1.10.v20130312
+42   [main] INFO  org.eclipse.jetty.deploy.providers.ScanningAppProvider  – Deployment monitor /home/student/Projects/Building-Oregon/jetty/contexts at interval 0
+61   [main] INFO  org.eclipse.jetty.deploy.DeploymentManager  – Deployable added: /home/student/Projects/Building-Oregon/jetty/contexts/solr.xml
+1077 [main] INFO  org.eclipse.jetty.webapp.StandardDescriptorProcessor  – NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+1117 [main] INFO  org.apache.solr.servlet.SolrDispatchFilter  – SolrDispatchFilter.init()
+1153 [main] INFO  org.apache.solr.core.SolrResourceLoader  – JNDI not configured for solr (NoInitialContextEx)
+1153 [main] INFO  org.apache.solr.core.SolrResourceLoader  – using system property solr.solr.home: /home/student/Projects/Building-Oregon/jetty/solr
+1154 [main] INFO  org.apache.solr.core.SolrResourceLoader  – new SolrResourceLoader for directory: '/home/student/Projects/Building-Oregon/jetty/solr/'
+1156 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/solr-clustering-4.9.0.jar' to classloader
+1156 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/solr-langid-4.9.0.jar' to classloader
+1156 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/' to classloader
+1156 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/solr-analysis-extras-4.9.0.jar' to classloader
+1251 [main] INFO  org.apache.solr.core.ConfigSolr  – Loading container configuration from /home/student/Projects/Building-Oregon/jetty/solr/solr.xml
+1434 [main] INFO  org.apache.solr.core.CoreContainer  – New CoreContainer 1314166731
+1435 [main] INFO  org.apache.solr.core.CoreContainer  – Loading cores into CoreContainer [instanceDir=/home/student/Projects/Building-Oregon/jetty/solr/]
+1436 [main] INFO  org.apache.solr.core.CoreContainer  – loading shared library: /home/student/Projects/Building-Oregon/jetty/solr/lib
+1437 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/solr-clustering-4.9.0.jar' to classloader
+1438 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/solr-langid-4.9.0.jar' to classloader
+1438 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/' to classloader
+1438 [main] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/solr-analysis-extras-4.9.0.jar' to classloader
+1449 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting socketTimeout to: 0
+1449 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting urlScheme to: null
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting connTimeout to: 0
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting maxConnectionsPerHost to: 20
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting corePoolSize to: 0
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting maximumPoolSize to: 2147483647
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting maxThreadIdleTime to: 5
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting sizeOfQueue to: -1
+1452 [main] INFO  org.apache.solr.handler.component.HttpShardHandlerFactory  – Setting fairnessPolicy to: false
+1620 [main] INFO  org.apache.solr.logging.LogWatcher  – SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+1621 [main] INFO  org.apache.solr.logging.LogWatcher  – Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+1621 [main] INFO  org.apache.solr.core.CoreContainer  – Host Name: 
+1654 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – new SolrResourceLoader for directory: '/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/'
+1654 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – new SolrResourceLoader for directory: '/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/'
+1684 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrConfig  – Adding specified lib dirs to ClassLoader
+1684 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrConfig  – Adding specified lib dirs to ClassLoader
+1700 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-fsa-1.7.1.jar' to classloader
+1700 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-fsa-1.7.1.jar' to classloader
+1701 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-stemming-1.7.1.jar' to classloader
+1701 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-stemming-1.7.1.jar' to classloader
+1701 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-polish-1.7.1.jar' to classloader
+1701 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/morfologik-polish-1.7.1.jar' to classloader
+1701 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/icu4j-53.1.jar' to classloader
+1702 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lib/icu4j-53.1.jar' to classloader
+1702 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-stempel-4.9.0.jar' to classloader
+1702 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-stempel-4.9.0.jar' to classloader
+1702 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-smartcn-4.9.0.jar' to classloader
+1703 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-smartcn-4.9.0.jar' to classloader
+1703 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-icu-4.9.0.jar' to classloader
+1703 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-icu-4.9.0.jar' to classloader
+1703 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-morfologik-4.9.0.jar' to classloader
+1703 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  – Adding 'file:/home/student/Projects/Building-Oregon/jetty/solr/lib/contrib/analysis-extras/lucene-libs/lucene-analyzers-morfologik-4.9.0.jar' to classloader
+1799 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrConfig  – Using Lucene MatchVersion: LUCENE_4_0
+1800 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrConfig  – Using Lucene MatchVersion: LUCENE_4_0
+1867 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.Config  – Loaded SolrConfig: solrconfig.xml
+1867 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.Config  – Loaded SolrConfig: solrconfig.xml
+1871 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.schema.IndexSchema  – Reading Solr Schema from schema.xml
+1871 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.schema.IndexSchema  – Reading Solr Schema from schema.xml
+1906 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.schema.IndexSchema  – [blacklight-core] Schema name=Hydra
+1906 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.schema.IndexSchema  – [blacklight-core-test] Schema name=Hydra
+2109 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.schema.IndexSchema  – unique key field: id
+2109 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.schema.IndexSchema  – unique key field: id
+2206 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CoreContainer  – Creating SolrCore 'blacklight-core' using configuration from instancedir /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/
+2206 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.CoreContainer  – Creating SolrCore 'blacklight-core-test' using configuration from instancedir /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/
+2217 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – solr.StandardDirectoryFactory
+2217 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – solr.StandardDirectoryFactory
+2222 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] Opening new SolrCore at /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/, dataDir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/
+2222 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – [blacklight-core-test] Opening new SolrCore at /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/, dataDir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/
+2222 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – JMX monitoring not detected for core: blacklight-core
+2222 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – JMX monitoring not detected for core: blacklight-core-test
+2233 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.CachingDirectoryFactory  – return new directory for /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data
+2233 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CachingDirectoryFactory  – return new directory for /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data
+2235 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – New index directory detected: old=null new=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/index/
+2235 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – New index directory detected: old=null new=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index/
+2236 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CachingDirectoryFactory  – return new directory for /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/index
+2236 [coreLoadExecutor-5-thread-2] WARN  org.apache.solr.core.SolrCore  – [blacklight-core-test] Solr index directory '/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index' doesn't exist. Creating new index...
+2242 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.CachingDirectoryFactory  – return new directory for /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index
+2311 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – no updateRequestProcessorChain defined as default, creating implicit default
+2316 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created search: solr.SearchHandler
+2316 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created permissions: solr.SearchHandler
+2316 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created standard: solr.SearchHandler
+2317 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created document: solr.SearchHandler
+2317 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – adding lazy requestHandler: solr.ReplicationHandler
+2317 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /replication: solr.ReplicationHandler
+2317 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+2317 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /analysis/field: solr.FieldAnalysisRequestHandler
+2319 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /update: solr.UpdateRequestHandler
+2319 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /admin/: org.apache.solr.handler.admin.AdminHandlers
+2320 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.RequestHandlers  – created /admin/ping: solr.PingRequestHandler
+2338 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index,segFN=segments_1,generation=1}
+2338 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2338 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – newest commit generation = 1
+2339 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – no updateRequestProcessorChain defined as default, creating implicit default
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created search: solr.SearchHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created permissions: solr.SearchHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created standard: solr.SearchHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created document: solr.SearchHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – adding lazy requestHandler: solr.ReplicationHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created /replication: solr.ReplicationHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+2340 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created /analysis/field: solr.FieldAnalysisRequestHandler
+2341 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created /update: solr.UpdateRequestHandler
+2342 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created /admin/: org.apache.solr.handler.admin.AdminHandlers
+2342 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.RequestHandlers  – created /admin/ping: solr.PingRequestHandler
+2343 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.handler.loader.XMLLoader  – xsltCacheLifetimeSeconds=60
+2344 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – Hard AutoCommit: disabled
+2344 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – Soft AutoCommit: disabled
+2344 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – Hard AutoCommit: disabled
+2344 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – Soft AutoCommit: disabled
+2349 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index,segFN=segments_1,generation=1}
+2349 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/index,segFN=segments_1,generation=1}
+2349 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.SolrCore  – newest commit generation = 1
+2349 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.SolrCore  – newest commit generation = 1
+2353 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.search.SolrIndexSearcher  – Opening Searcher@66a9d56a[blacklight-core] main
+2353 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.search.SolrIndexSearcher  – Opening Searcher@17fa56ce[blacklight-core-test] main
+2357 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.rest.ManagedResourceStorage  – File-based storage initialized to use dir: /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/conf
+2357 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.ManagedResourceStorage  – File-based storage initialized to use dir: /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/conf
+2357 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.rest.RestManager  – Initializing RestManager with initArgs: {storageDir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/conf/}
+2357 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.RestManager  – Initializing RestManager with initArgs: {storageDir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/conf/}
+2364 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.ManagedResourceStorage  – Reading _rest_managed.json using file:dir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/conf
+2364 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.rest.ManagedResourceStorage  – Reading _rest_managed.json using file:dir=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/conf
+2364 [coreLoadExecutor-5-thread-1] WARN  org.apache.solr.rest.ManagedResource  – No stored data found for /rest/managed
+2364 [coreLoadExecutor-5-thread-2] WARN  org.apache.solr.rest.ManagedResource  – No stored data found for /rest/managed
+2364 [coreLoadExecutor-5-thread-1] WARN  org.apache.solr.rest.ManagedResource  – No registered observers for /rest/managed
+2364 [coreLoadExecutor-5-thread-2] WARN  org.apache.solr.rest.ManagedResource  – No registered observers for /rest/managed
+2365 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.rest.RestManager  – Initializing 0 registered ManagedResources
+2365 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.rest.RestManager  – Initializing 0 registered ManagedResources
+2365 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  – Initializing spell checkers
+2365 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.handler.component.SpellCheckComponent  – Initializing spell checkers
+2369 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  – Registering newSearcher listener for spellchecker: default
+2370 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.handler.component.SpellCheckComponent  – No queryConverter defined, using default converter
+2377 [coreLoadExecutor-5-thread-1] INFO  org.apache.solr.core.CoreContainer  – registering core: blacklight-core
+2377 [searcherExecutor-7-thread-1] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] Registered new searcher Searcher@66a9d56a[blacklight-core] main{StandardDirectoryReader(segments_1:1:nrt)}
+2404 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.handler.component.SpellCheckComponent  – Registering newSearcher listener for spellchecker: default
+2404 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.handler.component.SpellCheckComponent  – No queryConverter defined, using default converter
+2405 [searcherExecutor-6-thread-1] INFO  org.apache.solr.core.SolrCore  – [blacklight-core-test] Registered new searcher Searcher@17fa56ce[blacklight-core-test] main{StandardDirectoryReader(segments_1:1:nrt)}
+2405 [coreLoadExecutor-5-thread-2] INFO  org.apache.solr.core.CoreContainer  – registering core: blacklight-core-test
+2406 [main] INFO  org.apache.solr.servlet.SolrDispatchFilter  – user.dir=/home/student/Projects/Building-Oregon/jetty
+2406 [main] INFO  org.apache.solr.servlet.SolrDispatchFilter  – SolrDispatchFilter.init() done
+2425 [main] INFO  org.eclipse.jetty.server.AbstractConnector  – Started SocketConnector@0.0.0.0:8983
+379588 [qtp849012681-11] INFO  org.apache.solr.core.SolrCore  – UnInverted multi-valued field {field=subject_sim,memSize=4288,tindexSize=0,time=0,phase1=0,nTerms=0,bigTerms=0,termInstances=0,uses=0}
+379589 [qtp849012681-11] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] webapp=/solr path=/select params={qt=search&wt=ruby&rows=10} hits=0 status=0 QTime=41 
+5536069 [Thread-0] INFO  org.eclipse.jetty.server.Server  – Graceful shutdown SocketConnector@0.0.0.0:8983
+5536069 [Thread-0] INFO  org.eclipse.jetty.server.Server  – Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/student/Projects/Building-Oregon/jetty/solr-webapp/webapp/},/home/student/Projects/Building-Oregon/jetty/webapps/solr.war
+5537071 [Thread-0] INFO  org.apache.solr.core.CoreContainer  – Shutting down CoreContainer instance=1314166731
+5537072 [Thread-0] INFO  org.apache.solr.core.SolrCore  – [blacklight-core]  CLOSING SolrCore org.apache.solr.core.SolrCore@22981654
+5537073 [Thread-0] INFO  org.apache.solr.update.UpdateHandler  – closing DirectUpdateHandler2{commits=0,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+5537074 [Thread-0] INFO  org.apache.solr.update.SolrCoreState  – Closing SolrCoreState
+5537074 [Thread-0] INFO  org.apache.solr.update.DefaultSolrCoreState  – SolrCoreState ref count has reached 0 - closing IndexWriter
+5537075 [Thread-0] INFO  org.apache.solr.update.DefaultSolrCoreState  – closing IndexWriter with IndexWriterCloser
+5537078 [Thread-0] INFO  org.apache.solr.core.SolrCore  – [blacklight-core] Closing main searcher on request.
+5537079 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – Closing StandardDirectoryFactory - 2 directories currently being tracked
+5537080 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – looking to close /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/index [CachedDir<<refCount=0;path=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/index;done=false>>]
+5537080 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – Closing directory: /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data/index
+5537080 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – looking to close /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data [CachedDir<<refCount=0;path=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data;done=false>>]
+5537080 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – Closing directory: /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core/data
+5537080 [Thread-0] INFO  org.apache.solr.core.SolrCore  – [blacklight-core-test]  CLOSING SolrCore org.apache.solr.core.SolrCore@1e0137f1
+5537080 [Thread-0] INFO  org.apache.solr.update.UpdateHandler  – closing DirectUpdateHandler2{commits=0,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+5537081 [Thread-0] INFO  org.apache.solr.update.SolrCoreState  – Closing SolrCoreState
+5537081 [Thread-0] INFO  org.apache.solr.update.DefaultSolrCoreState  – SolrCoreState ref count has reached 0 - closing IndexWriter
+5537081 [Thread-0] INFO  org.apache.solr.update.DefaultSolrCoreState  – closing IndexWriter with IndexWriterCloser
+5537081 [Thread-0] INFO  org.apache.solr.core.SolrCore  – [blacklight-core-test] Closing main searcher on request.
+5537081 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – Closing StandardDirectoryFactory - 2 directories currently being tracked
+5537081 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – looking to close /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data [CachedDir<<refCount=0;path=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data;done=false>>]
+5537082 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – Closing directory: /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data
+5537082 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – looking to close /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index [CachedDir<<refCount=0;path=/home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index;done=false>>]
+5537082 [Thread-0] INFO  org.apache.solr.core.CachingDirectoryFactory  – Closing directory: /home/student/Projects/Building-Oregon/jetty/solr/blacklight-core-test/data/index
+5537083 [Thread-0] INFO  org.eclipse.jetty.server.handler.ContextHandler  – stopped o.e.j.w.WebAppContext{/solr,file:/home/student/Projects/Building-Oregon/jetty/solr-webapp/webapp/},/home/student/Projects/Building-Oregon/jetty/webapps/solr.war
