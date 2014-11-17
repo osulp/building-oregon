@@ -1,0 +1,23 @@
+<% # the way each document will be viewed in the sidebar list -%>
+<li class='media'>
+<div class="panel panel-default">
+  <div class="panel-heading" id="art-piece-panel">
+    <div class="panel-title">
+      <h4 class='media-heading'>
+        <%= link_to_map_document document, {:label => document_show_link_field(document), :counter => map_counter(document), :search_context => map_building(document)} %>
+      </h4>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-3">
+        photo
+      </div>
+      <div class="col-xs-8">
+        content
+      </div>
+      <div class="col-xs-1"></div>
+    </div>
+  </div>
+</div>
+</li>

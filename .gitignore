@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore Jetty
+/jetty
+
+# Ignore Coverage files
+/coverage

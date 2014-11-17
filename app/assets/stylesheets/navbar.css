@@ -1,0 +1,8 @@
+.navbar li {
+  display: inline;
+  padding-left: 20px;
+}
+.navbar-head {
+  text-align:right;
+  padding-top: 20px;
+}
