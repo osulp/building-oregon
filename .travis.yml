@@ -1,0 +1,13 @@
+cache:
+  - bundler
+language:
+  - ruby
+rvm:
+  - 2.1.3
+before_script:
+  - RAILS_ENV=test bundle exec rake db:create
+  - RAILS_ENV=test bundle exec rake jetty:clean
+  - RAILS_ENV=test bundle exec rake jetty:config
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+script:
+  - bundle exec rspec spec/ --format documentation
