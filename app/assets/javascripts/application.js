@@ -13,12 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //
+// Required by Blacklight
+//= require blacklight/blacklight
+//
 // Required by Blacklight-Maps
 //= require leaflet
 //= require leaflet.markercluster
 //= require L.Control.Sidebar
 //= require blacklight-maps
+//= require blacklight-maps-browse
 //
-// Required by Blacklight
-//= require blacklight/blacklight
 //= require_tree .
