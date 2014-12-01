@@ -359,6 +359,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.1.1)
   recipient_interceptor
+  rsolr
   rspec-rails (~> 2.14.0)
   sass-rails (~> 4.0.3)
   shoulda-matchers
