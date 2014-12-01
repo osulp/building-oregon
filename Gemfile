@@ -18,6 +18,8 @@ gem 'draper', '~> 1.3'
 gem 'carrierwave'
 #Blacklight maps for mapping art pieces
 gem 'blacklight-maps'
+#Rsolr for solr testing
+gem 'rsolr'
 
 group :development do
 gem 'spring'

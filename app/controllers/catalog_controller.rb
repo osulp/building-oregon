@@ -1,8 +1,17 @@
 # -*- encoding : utf-8 -*-
 #
+
+
 class CatalogController < ApplicationController  
+  require 'rubygems'
+  require 'rsolr'
 
   include Blacklight::Catalog
+
+  solr = RSolr.connect :url => 'http://localhost:8983'
+  document = [{:creator => "", :title => "Reuter, J. A., House (The Dalles, Oregon)", :description => "This work was listed on the National Register of Historic Places on June 27, 1997."}]
+  solr.add document
+  solr.commit
 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
