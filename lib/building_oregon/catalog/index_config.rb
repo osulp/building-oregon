@@ -4,7 +4,7 @@ module BuildingOregon
       extend ActiveSupport::Concern
       included do
         configure_blacklight do |config|
-          config.add_index_field 'title_ssim', :label => 'title'
+          config.index.title_field = "title_ssim"
           config.add_index_field 'description_ssim', :label => 'description'
           config.add_index_field 'creator_ssim', :label => 'creator'
         end

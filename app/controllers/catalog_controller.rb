@@ -17,6 +17,7 @@ class CatalogController < ApplicationController
       :qt => 'search',
       :rows => 10 
     }
-
+    config.add_field_configuration_to_solr_request!
   end
+
 end 
