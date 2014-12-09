@@ -10,7 +10,6 @@ module BuildingOregon
           config.view.maps.tileurl = "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           config.view.maps.attribution = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
           config.view.maps.placename_coord_delimiter = '-|-'
-          config.view.maps.minzoom = 16
           config.view.maps.maxzoom = 17
           config.view.maps.default = true
         end

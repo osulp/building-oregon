@@ -19,15 +19,15 @@
 
       // Setup Leaflet map
         if(L.Browser.mobile){
-          var map_opts = {dragging: false, tap: false}
+          var map_opts = {dragging: false, tap: false, minZoom: 6}
         }else{
-          var map_opts = {}
+          var map_opts = { minZoom: 6}
         }
-        map = L.map(this.id, map_opts).setView([0,0], 2);
+        map = L.map(this.id, map_opts).setView([44.5620,-123.02], 2);
         window.map = map
         L.tileLayer(options.tileurl, {
           attribution: options.mapattribution,
-          maxZoom: options.maxzoom
+          maxZoom: options.maxzoom,
         }).addTo(map);
 
       // Initialize sidebar
