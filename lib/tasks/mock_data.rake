@@ -6,9 +6,8 @@ namespace :data do
     Blacklight.solr
     Blacklight.solr.delete_by_query "*:*"
     Blacklight.solr.commit
-    File.foreach(File.join(Rails.root, 'tmp', 'mock_data.txt')) do |line|
-      Blacklight.solr.add(JSON.parse line.gsub(/:(\w+)/){"\"#{$1}\""}.gsub('=>', ':'))
-    end
+    file = File.join(Rails.root, 'tmp', 'mock_data.txt')
+    Blacklight.solr.add(JSON.parse File.read(file))
     Blacklight.solr.commit
   end
 end
