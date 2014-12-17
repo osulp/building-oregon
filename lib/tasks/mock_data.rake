@@ -6,7 +6,7 @@ namespace :data do
     Blacklight.solr
     Blacklight.solr.delete_by_query "*:*"
     Blacklight.solr.commit
-    file = File.join(Rails.root, 'tmp', 'mock_data.txt')
+    file = File.join(Rails.root, 'tmp', 'mock_data.json')
     Blacklight.solr.add(JSON.parse File.read(file))
     Blacklight.solr.commit
   end
