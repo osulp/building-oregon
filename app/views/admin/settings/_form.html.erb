@@ -1,0 +1,4 @@
+<%= simple_form_for [:admin, setting] do |f| %>
+  <%= f.input :value, as: setting.type, :input_html => { :id => "setting_value_#{setting.id}", :rows => 15, :cols => 120} %>
+  <%= f.button :submit %>
+<% end %>

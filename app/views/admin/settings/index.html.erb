@@ -1,0 +1,12 @@
+<% @settings.each do |s| %>
+  <div class="panel panel-default setting" id="setting-<%= s.id %>">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <%= s.setting_name %>
+      </div>
+    </div>
+    <div class="panel-body">
+      <%= render :partial => "form", :locals => {:setting => s} %>
+    </div>
+  </div>
+<% end %>
