@@ -1,0 +1,8 @@
+Contact:
+  tag_attributes:
+    type: text
+    default: ""
+About:
+  tag_attributes:
+    type: text
+    default: ""
