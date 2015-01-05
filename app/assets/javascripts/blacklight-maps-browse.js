@@ -19,9 +19,9 @@
 
       // Setup Leaflet map
         if(L.Browser.mobile){
-          var map_opts = {dragging: false, tap: false, minZoom: 6}
+          var map_opts = {dragging: false, tap: false, minZoom: 10}
         }else{
-          var map_opts = { minZoom: 6}
+          var map_opts = { minZoom: 5}
         }
         map = L.map(this.id, map_opts).setView([44.5620,-123.02], 2);
         window.map = map
