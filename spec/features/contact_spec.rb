@@ -12,7 +12,7 @@ describe 'Contact Page' do
         click_link "Contact Us"
       end
       it 'should say there are no settings configured' do 
-        expect(page).to have_content("No settings are configured.")
+        expect(page).to have_content("")
       end
     end
   end

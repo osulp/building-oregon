@@ -9,7 +9,7 @@ describe 'about us' do
     
     context "and no about setting is configured" do
       it "should show a default message" do
-        expect(page).to have_content("No 'About Us' setting is configured.")
+        expect(page).to have_content("")
       end
     end
 
