@@ -71,14 +71,8 @@
       var success = function (position) {
         locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
 
-        if(markers.getBounds().contains(locationMarker.getLatLng())) {
-          onCampus = true;
-        }
-        if(onCampus && !initialized){
+        if(!initialized){
           initialized = true;
-          map.fitBounds([[position.coords.latitude, position.coords.longitude],
-                         [position.coords.latitude, position.coords.longitude]], {});
-          map.setView([position.coords.latitude, position.coords.longitude], 40);
         }
       }
 
