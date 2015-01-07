@@ -8,7 +8,7 @@ describe 'about us' do
     end
     
     context "and no about setting is configured" do
-      it "should show a default message" do
+      it "should show a blank page" do
         expect(page).to have_content("")
       end
     end
