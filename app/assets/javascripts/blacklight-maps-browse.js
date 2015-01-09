@@ -66,20 +66,9 @@
         var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
       }
       var onCampus = false;
-      var initialized = false;
       // Puts the marker on the map if the get location was successful
       var success = function (position) {
         locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
-
-        if(markers.getBounds().contains(locationMarker.getLatLng())) {
-          onCampus = true;
-        }
-        if(onCampus && !initialized){
-          initialized = true;
-          map.fitBounds([[position.coords.latitude, position.coords.longitude],
-                         [position.coords.latitude, position.coords.longitude]], {});
-          map.setView([position.coords.latitude, position.coords.longitude], 40);
-        }
       }
 
       // Creates the geoJsonLayer

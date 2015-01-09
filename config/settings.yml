@@ -1,8 +1,10 @@
 Contact:
   tag_attributes:
     type: text
+    class: tinymce
     default: ""
 About:
   tag_attributes:
     type: text
+    class: tinymce
     default: ""

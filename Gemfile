@@ -18,6 +18,8 @@ gem 'draper', '~> 1.3'
 gem 'carrierwave'
 #Blacklight maps for mapping art pieces
 gem 'blacklight-maps'
+#For text editing
+gem 'tinymce-rails', '4.0.11'
 
 group :development do
 gem 'spring'

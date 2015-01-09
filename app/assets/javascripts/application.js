@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //
+// TinyMCE
+//= require tinymce-jquery
+//
 // Required by Blacklight
 //= require blacklight/blacklight
 //
@@ -20,6 +23,7 @@
 //= require leaflet
 //= require leaflet.markercluster
 //= require L.Control.Sidebar
+//= require easyButton
 //= require blacklight-maps
 //= require blacklight-maps-browse
 //
