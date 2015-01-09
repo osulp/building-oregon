@@ -118,7 +118,12 @@
 
     });
 
-    var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
+    if(markers.count > 0) {
+    var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.fitBounds(markers.getBounds())},'Reset Map')
+    }
+    else {
+      var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
+    }
 
     function setupSidebarDisplay(e, placenames){
       hideSidebar();
