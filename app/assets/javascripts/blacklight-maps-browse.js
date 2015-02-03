@@ -65,7 +65,6 @@
       if(navigator.geolocation) {
         var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
       }
-      var onCampus = false;
       // Puts the marker on the map if the get location was successful
       var success = function (position) {
         locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
@@ -119,7 +118,12 @@
 
     });
 
+    if(markers.count > 0) {
     var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.fitBounds(markers.getBounds())},'Reset Map')
+    }
+    else {
+      var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
+    }
 
     function setupSidebarDisplay(e, placenames){
       hideSidebar();
