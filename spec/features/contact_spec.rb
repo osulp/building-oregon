@@ -26,7 +26,7 @@ describe 'Contact Page' do
       before do
         click_link "Contact Us"
       end
-      it 'should say there are no settings configured' do 
+      it 'should display the configured settings' do 
         expect(page).to have_content("Yo!")
       end
     end
