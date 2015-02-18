@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/admin', :to => 'admin#index', :as => "admin_index"
 
   get '/about', :to => 'about#index', :as => 'about_index'
+  get '/contact', :to => 'contact#index', :as => "contact"
 
   namespace :admin do
     resources :coordinates

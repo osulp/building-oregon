@@ -16,6 +16,10 @@ describe "index page" do
       expect(page).to have_link('About Us')
     end
 
+    it "should have a link to the contact us page" do
+      expect(page).to have_link("Contact Us")
+    end
+
     context "logged in as admin and the admin panel link is clicked" do
       before do
         capybara_login(user) if user
