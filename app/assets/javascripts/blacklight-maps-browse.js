@@ -97,7 +97,7 @@
       map.addLayer(markers);
 
       // Zooms to show all points on map
-      if((geojson_docs.features.length > 0) && (!onCampus)) {
+      if(geojson_docs.features.length > 0) {
         map.fitBounds(markers.getBounds());
       }
 
