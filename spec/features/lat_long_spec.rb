@@ -11,7 +11,6 @@ describe "Lat\Long configuration" do
       before do
         visit root_path
       end
-
       it "Should display icons on the map" do
         expect(page).to have_selector('.leaflet-marker-icon')
       end
