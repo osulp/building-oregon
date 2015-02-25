@@ -7,6 +7,7 @@ describe "Lat\Long configuration" do
       loader = BuildingOregon::FixtureLoader.new("mock_data.json")
       loader.load!
     end
+
     context "and the homepage is visited", :js => true do
       before do
         visit root_path
