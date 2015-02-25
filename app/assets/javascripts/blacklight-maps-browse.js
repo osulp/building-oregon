@@ -154,7 +154,6 @@
       var html = "";
       var href = "";
       $.each(placenames, function(i,val){
-        // href = "/catalog?f[title_ssim][]="+i+"&search_field=all-fields&view=list"
         html += "<ul class='sidebar-list'>";
         $.each(val, function(j, val2){
           html += "<h1>" + val2 + "</h1>";
