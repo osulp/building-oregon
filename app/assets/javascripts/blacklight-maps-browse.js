@@ -97,7 +97,7 @@
       map.addLayer(markers);
 
       // Zooms to show all points on map
-      if((geojson_docs.features.length > 0) && (!onCampus)) {
+      if((geojson_docs.features.length > 0)) {
         map.fitBounds(markers.getBounds());
       }
 
@@ -149,16 +149,14 @@
       }
     }
 
-    // Build the list
+    //Build the List
     function buildList(placenames){
       var html = "";
       var href = "";
       $.each(placenames, function(i,val){
-        href = "/catalog?f[building_ss][]="+i+"&search_field=all-fields&view=list"
-        html += "<a href='"+href+"'><h2>" + i + "</h2></a>";
         html += "<ul class='sidebar-list'>";
         $.each(val, function(j, val2){
-          html += val2;
+          html += "<h1>" + val2 + "</h1>";
         });
         html += "</ul>";
       });
