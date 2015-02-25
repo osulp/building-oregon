@@ -4,9 +4,8 @@ require 'rake'
 describe "Lat\Long configuration" do
   context "When there is information in the database" do
     before do
-      load File.expand_path("../../../lib/tasks/mock_data.rake", __FILE__)
-      Rake::Task.define_task(:environment)
-      Rake::Task['data:mock'].invoke
+      loader = BuildingOregon::FixtureLoader.new("mock_data.json")
+      loader.load!
     end
     context "and the homepage is visited", :js => true do
       before do
