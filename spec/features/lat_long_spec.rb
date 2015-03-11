@@ -3,8 +3,11 @@ require 'rake'
 
 describe "Lat\Long configuration" do
   context "When there is information in the database" do
+    let(:loader) { BuildingOregon::FixtureLoader.new(json, solr) }
+    let(:file) { File.read(Rails.root.join("lib/tasks/mock_data.json")) }
+    let(:json) { JSON.parse(file) }
+    let(:solr) { Blacklight.solr }
     before do
-      loader = BuildingOregon::FixtureLoader.new("mock_data.json")
       loader.load!
     end
 
