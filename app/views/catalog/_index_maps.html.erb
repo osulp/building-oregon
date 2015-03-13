@@ -1,9 +1,13 @@
 <% # the way each document will be viewed in the sidebar list -%>
-<li class='media'>
-  <div class='media-body'>
-    <h1 class='media-heading'>
+<div class='panel panel-default'>
+  <div class='panel panel-heading'>
+    <h1>
       <%= link_to_document document %>
     </h1>
-    <% #add anything to display in the sidebar here %>
   </div>
-</li>
+  <div class="panel panel-body">
+    <% #add anything to display in the sidebar here %>
+    Creator: <%= document[:desc_metadata__creator_ssim].first %></p>
+    <p>Description: <%= document[:desc_metadata__description_ssim].first %></p>
+  </div>
+</div>
