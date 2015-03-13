@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'rake'
 
 describe "Lat\Long configuration" do
   context "When there is information in the database" do
