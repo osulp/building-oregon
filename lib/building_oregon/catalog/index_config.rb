@@ -5,8 +5,10 @@ module BuildingOregon
       included do
         configure_blacklight do |config|
           config.index.title_field = "desc_metadata__title_ssim"
-          config.add_index_field 'desc_metadata__description_ssim', :label => 'description'
-          config.add_index_field 'desc_metadata__creator_ssim', :label => 'creator'
+
+          METADATA["Index"].each_pair do |field, metadata|
+            config.add_index_field metadata, :label => field
+          end
         end
       end
     end
