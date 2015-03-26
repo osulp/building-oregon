@@ -2,7 +2,42 @@
   display: inline;
   padding-left: 20px;
 }
+.navbar a{
+  color: white;
+}
 .navbar-head {
   text-align:right;
   padding-top: 20px;
+  margin-bottom: 10px;
+}
+#header-navbar {
+  background-color: #144651;
+  padding-bottom: 0px;
+}
+.navbar-brand {
+  margin-top: 15px;
+}
+.search-query-form {
+  margin-top: 25px;
+}
+.move-down{
+  margin-top: 10px
+}
+.black{
+  background-color: black;
+  height: 45px;
+}
+.uo-image {
+  height:45px;
+  width:225px;
+  background:black image_url('uolib_white.gif');
+  color: transparent;
+  border: none;
+  border-width: 0px;
+}
+.osu-image {
+  height:45px;
+  width:225px;
+  background:transparent image_url('osulib_white.gif') no-repeat top left;
+  color: transparent;
 }
