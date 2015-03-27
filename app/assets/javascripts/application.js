@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //
+//Required for dynamic styling of main page
+//= require footer
+//
 // TinyMCE
 //= require tinymce-jquery
 //
