@@ -1,0 +1,13 @@
+#sidebar {
+  border-radius: 6px;
+  background-color: #f5dbb2;
+  padding: 0px;
+  border: 1px solid #d4d4d4;
+}
+#facets {
+  padding: 0px;
+}
+.top-panel-heading {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
