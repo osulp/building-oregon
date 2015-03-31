@@ -7,8 +7,7 @@
 }
 .navbar-head {
   text-align:right;
-  padding-top: 20px;
-  margin-bottom: 10px;
+  padding-top: 30px;
 }
 #header-navbar {
   background-color: #144651;
@@ -18,7 +17,7 @@
   margin-top: 15px;
 }
 .search-query-form {
-  margin-top: 25px;
+  margin-top: 35px;
 }
 .move-down{
   margin-top: 10px
@@ -27,17 +26,9 @@
   background-color: black;
   height: 45px;
 }
-.uo-image {
-  height:45px;
-  width:225px;
-  background:black image_url('uolib_white.gif');
-  color: transparent;
-  border: none;
-  border-width: 0px;
-}
-.osu-image {
-  height:45px;
-  width:225px;
-  background:transparent image_url('osulib_white.gif') no-repeat top left;
-  color: transparent;
+.logo-size {
+  padding-top: 5px;
+  margin-left: -40px;
+  height:115px;
+  width: 200px;
 }

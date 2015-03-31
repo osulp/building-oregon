@@ -6,16 +6,39 @@
 }
 #facets {
   padding: 0px;
+
+  .top-panel-heading {
+    margin-bottom: 0px;
+  }
 }
 .top-panel-heading {
   padding-bottom: 0px;
   padding-top: 0px;
+  margin-bottom: 0px;
+}
+.panel-heading {
+  margin-bottom: 0px;
 }
 .panel-group {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-
+#facet-panel-collapse {
+  .panel-heading:hover{
+    background-color: #d4d4d4;
+  }
+}
+.facet_limit.panel-default > .panel-heading.collapse-toggle.collapsed {
+  background-color: white;
+  color: black;
+}
+//.facet_limit.panel-default > .panel-heading.collapse-toggle {
+//  background-color: #1fa1bf;
+//  color: black;
+//}
 .panel-group .panel + .panel {
   margin-top: 0px;
+}
+.in#facet-panel-collapse {
+  overflow-y: visible;
 }

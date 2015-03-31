@@ -10,23 +10,24 @@
 <div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-    <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <div class="row">
-      <div class="col-md-4">
-        <%= link_to application_name, root_path, class: "navbar-brand" %>
+      <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="row">
+        <div class="col-md-2">
+          <%#= link_to application_name, root_path, class: "navbar-brand" %>
+          <%= image_tag "BO_Vertical_White-04.svg", :class => "logo-size" %>
+        </div>
+        <div class="col-md-4">
+          <%= render_search_bar  %>
+        </div>
+        <div class="col-md-6 collapse navbar-collapse" id="user-util-collapse">
+          <%= render :partial=>'/user_util_links' %>
+        </div>
       </div>
-      <div class="col-md-8">
-        <%= render_search_bar  %>
-      </div>
-    </div>
-    </div>
-    <div class="collapse navbar-collapse" id="user-util-collapse">
-      <%= render :partial=>'/user_util_links' %>
     </div>
   </div>
 </div>
