@@ -12,12 +12,21 @@
 #header-navbar {
   background-color: #144651;
   padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 .navbar-brand {
   margin-top: 15px;
 }
 .search-query-form {
   margin-top: 35px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+form {
+  border-color: #144651;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: white;
 }
 .move-down{
   margin-top: 10px
@@ -27,8 +36,59 @@
   height: 45px;
 }
 .logo-size {
-  padding-top: 5px;
-  margin-left: -40px;
-  height:115px;
-  width: 200px;
+  height:50px;
+  width: 180px;
+}
+
+@media(min-width: 1024px) and (max-width: 1680px){
+  #button{
+    display: none;
+  }
+  .logo-size {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width: 640px) and (max-width: 767px){
+  .navbar-inverse .navbar-form {
+    display: none;
+  }
+  .logo-size {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media(min-width: 480px) and (max-width: 639px){
+  .navbar-inverse .navbar-form {
+    display: none;
+  }
+  #content h1{
+    display: none;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .button-settings {
+    background-color: #144651;
+    border-color: white;
+    color: white;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px 10px 30px;
+    float: left;
+  }
+  .glyphicon-chevron-right {
+    font-size: 15px;
+  }
+  .logo-size {
+    margin-top: 5px;
+    float: right;
+    margin-right: 130px;
+  }
+  #facets {
+    display: none;
+  }
+
 }

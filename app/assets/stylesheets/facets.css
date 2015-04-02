@@ -32,10 +32,6 @@
   background-color: white;
   color: black;
 }
-//.facet_limit.panel-default > .panel-heading.collapse-toggle {
-//  background-color: #1fa1bf;
-//  color: black;
-//}
 .panel-group .panel + .panel {
   margin-top: 0px;
 }
