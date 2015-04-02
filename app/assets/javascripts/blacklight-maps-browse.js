@@ -156,7 +156,7 @@
       $.each(placenames, function(i,val){
         html += "<ul class='sidebar-list'>";
         $.each(val, function(j, val2){
-          html += "<h1>" + val2 + "</h1>";
+          html += val;
         });
         html += "</ul>";
       });
