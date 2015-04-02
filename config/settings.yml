@@ -8,3 +8,9 @@ About:
     type: text
     class: tinymce
     default: ""
+
+Help:
+  tag_attributes: 
+    type: text
+    class: tinymce
+    default: ""
