@@ -2,9 +2,10 @@ require 'json'
 
 namespace :data do
   desc "Loads Mock Data Into Solr"
-  task :mock do
+  task :mock => :environment do
     require "#{Rails.root}/lib/building_oregon/fixture_loader"
-    loader = BuildingOregon::FixtureLoader.new("mock_data.json")
+    json = JSON.parse(File.read(Rails.root.join("lib/tasks/mock_data.json")))
+    loader = BuildingOregon::FixtureLoader.new(json, Blacklight.solr)
     loader.load!
   end
 end
