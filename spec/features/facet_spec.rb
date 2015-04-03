@@ -1,6 +1,10 @@
 require 'spec_helper'
 
-describe "Factets" do
+describe "Facets" do
+  before do
+    Blacklight.solr.delete_by_query("*:*")
+    Blacklight.solr.commit
+  end
   context "When there is information in the database" do
     context "and the index page is visited" do
       before do
@@ -26,10 +30,6 @@ describe "Factets" do
     end
   end
   context "When there is no information in the database" do
-    before do
-      Blacklight.solr.delete_by_query("*:*")
-      Blacklight.solr.commit
-    end
     context "and the index page is visited" do
       before do
         visit root_path
