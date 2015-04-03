@@ -15,7 +15,6 @@ describe "Facets" do
       it "should display the facets" do
         expect(page).to have_selector(".facet-values")
       end
-
       context "When a Facet is clicked on" do
         before do
           click_link "Abby Morrow, 2014"
