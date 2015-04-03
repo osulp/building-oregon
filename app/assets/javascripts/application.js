@@ -19,6 +19,7 @@
 //Required for Popout to work
 //= require jpanel
 //= require jpanel-activation
+//= require sidebar-facets
 //
 // TinyMCE
 //= require tinymce-jquery
