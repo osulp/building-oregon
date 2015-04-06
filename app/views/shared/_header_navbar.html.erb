@@ -1,0 +1,35 @@
+<div class="container-fluid black">
+  <a class="pull-left" href="http://library.uoregon.edu">
+    <%= image_tag "uolib_white.gif" %>
+  </a>
+  <a class="pull-right" href="http://library.oregonstate.edu">
+    <%= image_tag "osulib_white.gif" %>
+  </a>
+</div>
+<div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="row">
+        <button type="button" id="button" class="btn btn-default button-settings">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+        <div class="col-md-2">
+          <%#= link_to application_name, root_path, class: "navbar-brand" %>
+          <%= image_tag "BO_Horizontal_White-04.svg", :class => "logo-size" %>
+        </div>
+        <div class="col-md-4">
+          <%= render_search_bar  %>
+        </div>
+        <div class="col-md-6 collapse navbar-collapse" id="user-util-collapse">
+          <%= render :partial=>'/user_util_links' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //
+//Required for dynamic styling of main page
+//= require footer
+//
+//Required for Popout to work
+//= require jpanel
+//= require jpanel-activation
+//= require sidebar-facets
+//
 // TinyMCE
 //= require tinymce-jquery
 //
