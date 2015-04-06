@@ -30,4 +30,8 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension( Blacklight::Solr::Document::DublinCore)    
 
+  def photo_path
+    "http://oregondigital.library.oregonstate.edu/media/medium-images/" + self.id.reverse.slice(0..1).insert(1, "/") + "/" + self.id.gsub(":", "-") + ".jpg"
+  end
+
 end
