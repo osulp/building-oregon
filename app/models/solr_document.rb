@@ -31,7 +31,8 @@ class SolrDocument
   use_extension( Blacklight::Solr::Document::DublinCore)    
 
   def photo_path
-    "http://oregondigital.library.oregonstate.edu/media/medium-images/" + self.id.reverse.slice(0..1).insert(1, "/") + "/" + self.id.gsub(":", "-") + ".jpg"
+    fd = BuildingOregon::FileDistributor.new(self.id)
+    fd.path
   end
 
 end
