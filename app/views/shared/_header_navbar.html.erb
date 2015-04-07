@@ -20,13 +20,15 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
         </button>
         <div class="col-md-2">
+          <a href=<% root_path %>>
           <%#= link_to application_name, root_path, class: "navbar-brand" %>
           <%= image_tag "BO_Horizontal_White-04.svg", :class => "logo-size" %>
+        </a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <%= render_search_bar  %>
         </div>
-        <div class="col-md-6 collapse navbar-collapse" id="user-util-collapse">
+        <div class="col-md-4 collapse navbar-collapse" id="user-util-collapse">
           <%= render :partial=>'/user_util_links' %>
         </div>
       </div>

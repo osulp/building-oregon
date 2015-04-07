@@ -8,10 +8,12 @@
       <% if current_user && current_user.admin? %>
         <%= link_to "Admin Panel", admin_index_path %>
       <% end %>
+
+    <!-- May Implement later to extend functionality
     </li>
-    <li>
-      <%= link_to t('blacklight.header_links.bookmarks'), bookmarks_path %>
-    </li>
+      <%#= link_to t('blacklight.header_links.bookmarks'), bookmarks_path %>
+    </li>-->
+
     <li>
       <%= link_to "About Us", about_index_path %>
     </li>
@@ -22,14 +24,18 @@
       <%= link_to "Help", help_path %>
     </li>
   <% end %>
-  <% if has_user_authentication_provider? and current_user %>
+  <!-- May Implement later to extend functionality
+  <#% if has_user_authentication_provider? and current_user %>
     <li>
-      <%= link_to t('blacklight.header_links.saved_searches'), saved_searches_path %>
+      <%#= link_to t('blacklight.header_links.saved_searches'), saved_searches_path %>
     </li>
-  <% end %>
+  <#% end %>
+  -->
+  <!-- May Implement later to extend functionality
   <li>
-    <%= link_to t('blacklight.header_links.search_history'), search_history_path %>
+    <%#= link_to t('blacklight.header_links.search_history'), search_history_path %>
   </li>
+  -->
   <% if has_user_authentication_provider? %>
     <% if current_user %>
       <li>
