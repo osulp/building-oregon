@@ -1,9 +1,12 @@
 require 'spec_helper'
 
 describe "Show Page" do
+  let(:loader) { BuildingOregon::FixtureLoader.new(json, solr) }
+  let(:file) { File.read(Rails.root.join("lib/tasks/mock_data.json")) }
+  let(:json) { JSON.parse(file) }
+  let(:solr) { Blacklight.solr }
   context "When on the index page" do
     before do
-      loader = BuildingOregon::FixtureLoader.new("mock_data.json")
       loader.load!
       visit root_path
     end
@@ -16,7 +19,7 @@ describe "Show Page" do
         end
       end
       it "should take you to the show page with information" do
-        expect(page).to have_content("Description")
+        expect(page).to have_content("title")
       end
     end
   end

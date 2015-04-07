@@ -1,14 +1,13 @@
 require 'spec_helper'
 
 describe "Facets" do
-  before do
-    Blacklight.solr.delete_by_query("*:*")
-    Blacklight.solr.commit
-  end
+  let(:loader) { BuildingOregon::FixtureLoader.new(json, solr) }
+  let(:file) { File.read(Rails.root.join("lib/tasks/mock_data.json")) }
+  let(:json) { JSON.parse(file) }
+  let(:solr) { Blacklight.solr }
   context "When there is information in the database" do
     context "and the index page is visited" do
       before do
-        loader = BuildingOregon::FixtureLoader.new("mock_data.json")
         loader.load!
         visit root_path
       end
@@ -31,6 +30,8 @@ describe "Facets" do
   context "When there is no information in the database" do
     context "and the index page is visited" do
       before do
+        solr.delete_by_query("*:*")
+        solr.commit
         visit root_path
       end
       it "should have no facets there" do
