@@ -12,7 +12,12 @@
 #header-navbar {
   background-color: #144651;
   padding-bottom: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+#content {
+  h1 {
+    margin-top: 20px;
+  }
 }
 .navbar-brand {
   margin-top: 15px;
@@ -66,6 +71,7 @@ form {
   }
   #content h1{
     display: none;
+    margin-top: 0px;
   }
   .navbar-toggle {
     display: none;
