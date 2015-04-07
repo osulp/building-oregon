@@ -2,7 +2,13 @@
   border-radius: 6px;
   background-color: #f5dbb2;
   padding: 0px;
+  margin-top: 70px;
   border: 1px solid #d4d4d4;
+}
+.show-tools {
+  .panel-heading {
+    background-color: #f5dbb2;
+  }
 }
 #facets {
   padding: 0px;
