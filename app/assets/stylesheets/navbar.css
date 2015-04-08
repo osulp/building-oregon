@@ -54,7 +54,7 @@ form {
   .navbar-inverse .navbar-form {
     display: none;
   }
-  #content h1{
+  #content > h1{
     display: none;
   }
   .navbar-toggle {
