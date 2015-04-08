@@ -5,6 +5,11 @@ describe "Facets" do
   let(:file) { File.read(Rails.root.join("lib/tasks/mock_data.json")) }
   let(:json) { JSON.parse(file) }
   let(:solr) { Blacklight.solr }
+
+  before do
+    delete_index
+  end
+
   context "When there is information in the database" do
     context "and the index page is visited" do
       before do
@@ -30,8 +35,6 @@ describe "Facets" do
   context "When there is no information in the database" do
     context "and the index page is visited" do
       before do
-        solr.delete_by_query("*:*")
-        solr.commit
         visit root_path
       end
       it "should have no facets there" do
@@ -39,4 +42,9 @@ describe "Facets" do
       end
     end
   end
+end
+
+def delete_index
+  solr.delete_by_query("*:*")
+  solr.commit
 end
