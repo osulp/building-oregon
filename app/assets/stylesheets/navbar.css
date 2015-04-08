@@ -54,7 +54,6 @@ form {
   }
 }
 
-
 @media(min-width: 480px) and (max-width: 767px){
   .navbar-inverse .navbar-form {
     margin-top: -5px;
