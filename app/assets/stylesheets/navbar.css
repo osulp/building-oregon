@@ -57,7 +57,13 @@ form {
 
 @media(min-width: 480px) and (max-width: 767px){
   .navbar-inverse .navbar-form {
-    display: none;
+    margin-top: -5px;
+    margin-left: 13px;
+    margin-right: 9px;
+  }
+  .search-query-form {
+    border-top: 0px;
+    border-bottom: 0px;
   }
   #content > h1{
     display: none;
@@ -72,7 +78,7 @@ form {
     color: white;
     height: 40px;
     width: 40px;
-    margin: 10px 0px 10px 30px;
+    margin: 10px 0px 10px 43px;
     float: left;
   }
   .glyphicon-chevron-right {
@@ -83,7 +89,8 @@ form {
     left: 50%;
     position: absolute;
     margin-top: 5px;
-    margin-left: -80px;
+    float: right;
+    margin-right: 170px;
   }
   #facets {
     display: none;

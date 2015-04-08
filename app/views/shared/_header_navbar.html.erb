@@ -16,7 +16,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="row">
-        <button type="button" id="button" class="btn btn-default button-settings">
+        <button onclick="toggleGlyphicon()" type="button" id="button" class="btn btn-default button-settings">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </button>
         <div class="col-md-2">
@@ -24,7 +24,7 @@
             <%= image_tag "BO_Horizontal_White-04.svg", :class => "logo-size" %>
           </a>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4 col-xs-12 ">
           <%= render_search_bar  %>
         </div>
         <div class="col-md-4 collapse navbar-collapse" id="user-util-collapse">
