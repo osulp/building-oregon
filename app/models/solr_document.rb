@@ -31,8 +31,13 @@ class SolrDocument
   use_extension( Blacklight::Solr::Document::DublinCore)    
 
   def photo_path
-    fd = BuildingOregon::FileDistributor.new(self.id)
-    fd.path
+    file_distributor.path
+  end
+
+  private
+
+  def file_distributor
+    BuildingOregon::FileDistributor.new(self.id)
   end
 
 end
