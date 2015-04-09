@@ -54,22 +54,12 @@ form {
   }
 }
 
-@media(min-width: 640px) and (max-width: 767px){
-  .navbar-inverse .navbar-form {
-    display: none;
-  }
-  .logo-size {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
-@media(min-width: 480px) and (max-width: 639px){
+@media(min-width: 480px) and (max-width: 767px){
   .navbar-inverse .navbar-form {
     display: none;
   }
-  #content h1{
+  #content > h1{
     display: none;
     margin-top: 0px;
   }
@@ -89,9 +79,11 @@ form {
     font-size: 15px;
   }
   .logo-size {
+    top: 50%;
+    left: 50%;
+    position: absolute;
     margin-top: 5px;
-    float: right;
-    margin-right: 130px;
+    margin-left: -80px;
   }
   #facets {
     display: none;
