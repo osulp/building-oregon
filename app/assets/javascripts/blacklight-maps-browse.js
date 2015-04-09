@@ -19,7 +19,7 @@
 
       // Setup Leaflet map
         if(L.Browser.mobile){
-          var map_opts = {dragging: false, tap: false, minZoom: 10}
+          var map_opts = {dragging: false, tap: false, minZoom: 8}
         }else{
           var map_opts = { minZoom: 4}
         }
