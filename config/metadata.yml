@@ -4,14 +4,14 @@ Facets:
   description: 'desc_metadata__description_ssim'
 
 Show:
-  title: 'desc_metadata__title_ssm'
-  creator: 'desc_metadata__creator_ssm'
-  description: 'desc_metadata__description_ssm'
-  view: 'desc_metadata__view_ssm'
-  provenance: 'desc_metadata__provenance_ssm'
-  temporal: 'desc_metadata__temporal_ssm'
-  location: 'desc_metadata__location_label_ssm'
+  title: 'desc_metadata__title_ssim'
+  creator: 'desc_metadata__creator_ssim'
+  description: 'desc_metadata__description_ssim'
+  view: 'desc_metadata__view_ssim'
+  provenance: 'desc_metadata__provenance_ssim'
+  temporal: 'desc_metadata__temporal_ssim'
+  location: 'desc_metadata__location_label_ssim'
 
 Index:
-  creator: 'desc_metadata__creator_ssm'
-  description: 'desc_metadata__description_ssm'
+  creator: 'desc_metadata__creator_ssim'
+  description: 'desc_metadata__description_ssim'
