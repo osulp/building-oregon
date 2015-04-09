@@ -34,7 +34,15 @@ class SolrDocument
     file_distributor.path
   end
 
+  def build_location_links
+    link_generator(self['desc_metadata__location_label_ssm']).extract_links
+  end
+
   private
+
+  def link_generator(location_array)
+    BuildingOregon::LinkGenerator.new(location_array)
+  end
 
   def file_distributor
     fd = BuildingOregon::FileDistributor.new(self.id)
