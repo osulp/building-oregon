@@ -27,6 +27,10 @@ module BuildingOregon
       @extension = extension
     end
 
+    def base
+      @source_site + @base_path
+    end
+
     def bucket_path
       reversed = (identifier.rjust(@depth, "0")).reverse.split(//)
       bucket_path = (["%s"] * @depth).join("/") % reversed + "/"
@@ -34,7 +38,8 @@ module BuildingOregon
     end
 
     def path
-      return @source_site + "media/medium-images/" + bucket_path + filename
+      return base + bucket_path + filename
     end
+   
   end
 end
