@@ -6,17 +6,7 @@
     <% if should_render_show_field? document, field %>
       <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
       <dd class="blacklight-<%= field_name.parameterize %>">
-        <% if field_name == 'desc_metadata__location_label_ssm' %>
-          <% locations =  document.build_location_links.locations %>
-          <% links = document.build_location_links.location_links %>
-          <% locations.each_with_index do |location, index| %>
-            <%= link_to location, links[index] unless links[index].blank? %>
-            <%= location if links[index].blank? %>
-            </br>
-          <% end %>
-        <% else %>
-          <%= render_document_show_field_value document, field: field_name %>
-        <% end %>
+        <%= render_document_show_field_value document, field: field_name %>
       </dd>
     <% end -%>
   <% end -%>
