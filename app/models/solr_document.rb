@@ -30,4 +30,17 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension( Blacklight::Solr::Document::DublinCore)    
 
+  def photo_path
+    file_distributor.path
+  end
+
+  private
+
+  def file_distributor
+    fd = BuildingOregon::FileDistributor.new(self.id)
+    fd.source_url="http://oregondigital.library.oregonstate.edu"
+    fd.extension=".jpg"
+    fd
+  end
+
 end
