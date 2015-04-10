@@ -1,4 +1,6 @@
+<h1>Contact Us</h1>
 <% if Setting.contact.blank? %>
+
 <% else %>
-  <%= Setting.contact %>
+  <%= raw Setting.contact %>
 <% end %>
