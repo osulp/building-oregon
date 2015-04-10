@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe ControlledValue do
+RSpec.describe BuildingOregon::ControlledValue do
   subject { described_class.new(value) }
   describe "#to_s" do
     let(:result) { subject.to_s }

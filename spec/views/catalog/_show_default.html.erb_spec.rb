@@ -26,7 +26,7 @@ RSpec.describe "catalog/_show_default.html.erb" do
     context "with a CV" do
       let(:location_label) { "Stuff and Things$http://test.org" }
       it "should just display the label" do
-        expect(rendered).to include ControlledValue.new(location_label).to_s
+        expect(rendered).to include BuildingOregon::ControlledValue.new(location_label).to_s
       end
     end
   end

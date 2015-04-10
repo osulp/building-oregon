@@ -36,7 +36,7 @@ class SolrDocument
 
   def build_link(field)
     Array(self[field]).map do |value|
-      ControlledValue.new(value).to_s
+      BuildingOregon::ControlledValue.new(value).to_s
     end
   end
 
@@ -44,7 +44,7 @@ class SolrDocument
 
   def file_distributor
     fd = BuildingOregon::FileDistributor.new(self.id)
-    fd.source_url="http://oregondigital.library.oregonstate.edu"
+    fd.source_site="http://oregondigital.library.oregonstate.edu"
     fd.extension=".jpg"
     fd
   end
