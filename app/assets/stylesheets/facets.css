@@ -1,3 +1,11 @@
+@media(min-width: 992px) {
+  #document.document {
+    z-index: 100000;
+    margin-right: -150px;
+    margin-left: 150px;
+  }
+}
+
 #sidebar > .facets {
   border-radius: 6px;
   background-color: #f5dbb2;
