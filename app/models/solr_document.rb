@@ -44,7 +44,7 @@ class SolrDocument
 
   def file_distributor
     fd = BuildingOregon::FileDistributor.new(self.id)
-    fd.source_site="http://oregondigital.library.oregonstate.edu"
+    fd.source_site="http://oregondigital.library.oregonstate.edu/"
     fd.extension=".jpg"
     fd
   end

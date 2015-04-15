@@ -1,14 +1,6 @@
-<div class="container-fluid black">
-  <a class="pull-left" href="http://library.uoregon.edu">
-    <%= image_tag "uolib_white.gif" %>
-  </a>
-  <a class="pull-right" href="http://library.oregonstate.edu">
-    <%= image_tag "osulib_white.gif" %>
-  </a>
-</div>
 <div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
+  <div class="container extend">
+    <div class="navbar-header extend">
       <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -19,15 +11,15 @@
         <button onclick="toggleGlyphicon()" type="button" id="button" class="btn btn-default button-settings">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </button>
-        <div class="col-md-2">
+        <div class="col-md-3">
           <a href="/">
             <%= image_tag "BO_Horizontal_White-04.svg", :class => "logo-size" %>
           </a>
         </div>
-        <div class="col-md-4 col-xs-12 ">
-          <%= render_search_bar  %>
+        <div class="col-md-12 col-xs-12 col-sm-12 ">
+          <%= render_search_bar %>
         </div>
-        <div class="col-md-4 collapse navbar-collapse" id="user-util-collapse">
+        <div class="col-md-4 col-sm-12 col-xs-12 collapse navbar-collapse" id="user-util-collapse">
           <%= render :partial=>'/user_util_links' %>
         </div>
       </div>
