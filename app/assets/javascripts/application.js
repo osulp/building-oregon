@@ -16,6 +16,9 @@
 //Required for dynamic styling of main page
 //= require footer
 //
+//Required for toggling button glyphicon
+//= require toggleGlyphicon
+//
 //Required for Popout to work
 //= require jpanel
 //= require jpanel-activation

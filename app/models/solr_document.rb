@@ -6,7 +6,7 @@ class SolrDocument
   extension_parameters[:marc_source_field] = :marc_display
   extension_parameters[:marc_format_type] = :marcxml
   
-  field_semantics.merge!(    
+  field_semantics.merge!(
                          :title => "title_display",
                          :author => "author_display",
                          :language => "language_facet",
@@ -28,17 +28,23 @@ class SolrDocument
   # single valued. See Blacklight::Solr::Document::ExtendableClassMethods#field_semantics
   # and Blacklight::Solr::Document#to_semantic_values
   # Recommendation: Use field names from Dublin Core
-  use_extension( Blacklight::Solr::Document::DublinCore)    
+  use_extension( Blacklight::Solr::Document::DublinCore)
 
   def photo_path
     file_distributor.path
+  end
+
+  def build_link(field)
+    Array(self[field]).map do |value|
+      BuildingOregon::ControlledValue.new(value).to_s
+    end
   end
 
   private
 
   def file_distributor
     fd = BuildingOregon::FileDistributor.new(self.id)
-    fd.source_url="http://oregondigital.library.oregonstate.edu"
+    fd.source_site="http://oregondigital.library.oregonstate.edu"
     fd.extension=".jpg"
     fd
   end
