@@ -1,6 +1,6 @@
-.navbar li {
-  display: inline;
-  padding-left: 5px;
+mnavbar li {
+display: inline;
+padding-left: 5px;
 }
 .navbar ul {
   padding-left: 0px;
@@ -59,7 +59,7 @@ form {
     margin-left: -150px;
   }
   #user-util-collapse {
-    width: 300px;
+    width: 250px;
     padding-left: 0px;
   }
 }
@@ -116,11 +116,21 @@ form {
   #header-navbar > .container {
     height: 150px;
   }
-
+  .input-group {
+    width: 100%;
+  }
+  .search-query-form {
+    width: 100%;
+  }
+  .navbar-form .form-control {
+    width: 70%;
+  }
+  select#search_field.search_field.form-control {
+    width: 100px;
+  }
 }
-.search-query-form .input-group {
-  width: 100%;
-  .input-group-addon,.input-group-btn {
-    width: 1%;
+@media(max-width: 686px) {
+  .navbar-form .form-control {
+    width: 55%;
   }
 }
