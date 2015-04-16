@@ -1,6 +1,9 @@
 .navbar li {
-  display: inline;
-  padding-left: 20px;
+display: inline;
+padding-left: 5px;
+}
+.navbar ul {
+  padding-left: 0px;
 }
 .navbar a{
   color: white;
@@ -41,23 +44,48 @@ form {
   height: 45px;
 }
 .logo-size {
-  height:50px;
-  width: 180px;
+  height:100px;
+  width: 300px;
 }
 
-@media(min-width: 1024px) and (max-width: 1680px){
+@media(min-width: 992px) and (max-width: 1680px){
   #button{
     display: none;
   }
   .logo-size {
-    margin-top: 20px;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+  }
+  #user-util-collapse {
+    width: 200px;
+    padding-left: 0px;
+  }
+  .navbar-header {
+    width: 100%;
+  }
+  .search-query-form {
+    width: 100%;
+  }
+  .navbar-form .form-control {
+    width: 50%;
+  }
+  select#search_field.search_field.form-control {
+    width: 100px;
+  }
+  .input-group {
+    width: 100%;
   }
 }
 
-
-@media(min-width: 480px) and (max-width: 767px){
-  .navbar-inverse .navbar-form {
-    margin-top: -5px;
+@media(min-width: 480px) and (max-width: 991px){
+  #header-navbar > .container {
+    margin-left: 0px;
+    margin-right: 0px; 
+  } 
+  .navbar-inverse .navbar-form { 
+    margin-top: 15px;
     margin-left: 13px;
     margin-right: 9px;
   }
@@ -78,22 +106,46 @@ form {
     color: white;
     height: 40px;
     width: 40px;
-    margin: 10px 0px 10px 43px;
+    margin: 40px 0px 0px 43px;
     float: left;
   }
   .glyphicon-chevron-right {
     font-size: 15px;
   }
   .logo-size {
-    top: 50%;
+    top: 10%;
     left: 50%;
     position: absolute;
     margin-top: 5px;
-    float: right;
-    margin-right: 170px;
+    margin-left: -150px;
+  }
+  #user-util-collapse {
+    display: none !important;
   }
   #facets {
     display: none;
   }
-
+  .extend {
+    width: 100%;
+  }
+  #header-navbar > .container {
+    height: 150px;
+  }
+  .input-group {
+    width: 100%;
+  }
+  .search-query-form {
+    width: 100%;
+  }
+  .navbar-form .form-control {
+    width: 70%;
+  }
+  select#search_field.search_field.form-control {
+    width: 100px;
+  }
+}
+@media(max-width: 686px) {
+  .navbar-form .form-control {
+    width: 55%;
+  }
 }
