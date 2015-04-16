@@ -5,7 +5,7 @@ describe "Lat\Long configuration" do
     let(:loader) { BuildingOregon::FixtureLoader.new(json, solr) }
     let(:file) { File.read(Rails.root.join("lib/tasks/mock_data.json")) }
     let(:json) { JSON.parse(file) }
-    let(:solr) { Blacklight.solr }
+    let(:solr) { Blacklight.default_index.connection }
     before do
       loader.load!
     end
