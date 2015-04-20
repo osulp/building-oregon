@@ -1,7 +1,14 @@
 Facets:
   title: 'desc_metadata__title_ssim'
-  creator: 'desc_metadata__creator_ssim'
-  description: 'desc_metadata__description_ssim'
+  creator: 'desc_metadata__creator_label_sim'
+  photographer: 'desc_metadata__photographer_label_sim'
+  style period: 'desc_metadata__style_period_sim'
+  location: 'desc_metadata__location_label_sim'
+  date: 'desc_metadata__date_sim'
+  rights: 'desc_metadata__rights_label_sim'
+  material: 'desc_metadata__material_sim'
+  institution: 'desc_metadata__institution_sim'
+  citation: 'desc_metadata__citation_sim'
 
 Show:
   title: 'desc_metadata__title_ssm'
