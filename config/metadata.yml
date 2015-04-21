@@ -22,5 +22,6 @@ Show:
 Index:
   creator: 'desc_metadata__creator_sim'
   decade: 'date_decade_ssim'
-  work type: 'desc_metadata__workType_label_sim'
+  material: 'desc_metadata__material_ssm'
+  date: 'desc_metadata__temporal_ssm'
   
