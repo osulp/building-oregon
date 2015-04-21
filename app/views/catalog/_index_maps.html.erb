@@ -6,9 +6,19 @@
     </h3>
   </div>
   <div class="panel panel-body">
-    <% #add anything to display in the sidebar here %>
-    <p>Creator: <%= Array.wrap(document[:desc_metadata__creator_ssim]).first %></p>
-    <p>Description: <%= Array.wrap(document[:desc_metadata__description_ssim]).first %></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img class="thumbnail" src="<%= document.photo_path %>">
+        </div>
+        <div class="col-md-10">
+          <% #add anything to display in the sidebar here %>
+          <p>Creator: <%= Array.wrap(document[:desc_metadata__creator_ssim]).first %></p>
+          <p>Date: <%= Array.wrap(document[:desc_metadata__temporal_ssm]).first %></p>
+          <p>Material: <%= Array.wrap(document[:desc_metadata__material_ssm]).first %></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
