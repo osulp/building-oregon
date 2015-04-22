@@ -21,7 +21,6 @@ Show:
 
 Index:
   creator: 'desc_metadata__creator_sim'
-  decade: 'date_decade_ssim'
   material: 'desc_metadata__material_ssm'
   date: 'desc_metadata__temporal_ssm'
   
