@@ -7,3 +7,6 @@ test:
 production:
   startup_wait: 15
   jetty_port: 8983
+staging:
+  startup_wait: 15
+  jetty_port: 8983

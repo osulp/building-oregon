@@ -20,6 +20,7 @@ gem 'carrierwave'
 gem 'blacklight-maps'
 #For text editing
 gem 'tinymce-rails', '4.0.11'
+gem 'passenger'
 
 group :development do
 gem 'spring'
@@ -35,7 +36,6 @@ gem 'rspec-rails', '~> 2.14.0'
 # Test Coverage
 gem 'coveralls', :require => false
 gem 'simplecov'
-
 end
 group :test do
 gem 'poltergeist'
