@@ -3,7 +3,9 @@ class SolrDocument
 
   def initialize(*args)
     super
-    self["coords_ssim"] = [coordinates]
+    if self["desc_metadata__latitude_ssm"] != nil
+      self["coords_ssim"] = [coordinates]
+    end
   end
 
   include Blacklight::Solr::Document    
