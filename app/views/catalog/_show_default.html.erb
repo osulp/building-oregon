@@ -5,11 +5,7 @@
   <% document.filter_show_exceptions.each do |field_name| -%>
     <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label(document, field: field_name.gsub("desc_metadata__", "").gsub("ssm", "").gsub("ssim", "").gsub("label", "")) %></dt>
     <dd class="blacklight-<%= field_name.parameterize %>">
-    <% if(render_document_show_field_value document, field: field_name).include?("$") %>
-      <%= document.build_link(field_name).map(&:inspect).join(", ").gsub("\"", "") %>
-    <% else %>
-      <%= render_document_show_field_value document, field: field_name %>
-    <% end %>
+    <%= render_document_show_field_value document, field: field_name, :value => document.build_link(field_name) %>
     </dd>
   <% end -%>
 </dl>
