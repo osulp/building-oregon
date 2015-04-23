@@ -17,7 +17,17 @@ RSpec.describe CatalogController do
     end
     context "when there are unreviewed documents" do
       before do
-        solr.add({:id => "bad_doc", :reviewed_ssim => "false"})
+        solr.add({:id => "bad_doc", :reviewed_ssim => "false", :desc_metadata__set_ssm => "http://oregondigital.org/resource/oregondigital:building-or"})
+        solr.commit
+        get :index
+      end
+      it "should not return them" do
+        expect(assigns(:document_list).length).to eq 0
+      end
+    end
+    context "when there are documents in the wrong collection" do
+      before do
+        solr.add({:id => "bad_doc", :reviewed_ssim => "true", :desc_metadata__set_ssm => "http://oregondigital.org/resource/oregondigital:building-or"})
         solr.commit
         get :index
       end
