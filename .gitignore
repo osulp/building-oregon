@@ -20,3 +20,7 @@
 
 # Ignore Coverage files
 /coverage
+
+# Ignore configuration
+/config/config.yml
+/config/god.conf

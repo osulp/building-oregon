@@ -20,6 +20,18 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  <<: *default
-  database: db/production.sqlite3
+production: &production
+  adapter: <%= ENV['BUILDINGOREGON_ADAPTER'] || "sqlite3" %>
+  database: <%= ENV['BUILDINGOREGON_DB'] || 'db/production.sqlite3' %>
+  encoding: utf8
+  reconnect: false
+  username: <%= ENV['BUILDINGOREGON_DB_USERNAME'] %>
+  password: <%= ENV['BUILDINGOREGON_DB_PASSWORD'] %>
+  host: <%= ENV['BUILDINGOREGON_DB_HOST'] %>
+  port: <%= ENV['BUILDINGOREGON_DB_PORT'] || 3306 %>
+  pool: 5
+  timeout: 5000
+
+staging:
+  <<: *production
+
