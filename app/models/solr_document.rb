@@ -1,6 +1,13 @@
 # -*- encoding : utf-8 -*-
 class SolrDocument 
 
+  def initialize(*args)
+    super
+    if self["desc_metadata__latitude_ssm"] != nil
+      self["coords_ssim"] = [coordinates]
+    end
+  end
+
   include Blacklight::Solr::Document    
       # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marc_display
@@ -38,6 +45,14 @@ class SolrDocument
     Array(self[field]).map do |value|
       BuildingOregon::ControlledValue.new(value).to_s
     end
+  end
+
+  def coordinates
+    [
+      self["desc_metadata__title_ssm"],
+      self["desc_metadata__latitude_ssm"],
+      self["desc_metadata__longitude_ssm"]
+    ].join("-|-")
   end
 
   private
