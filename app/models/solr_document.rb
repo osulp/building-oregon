@@ -69,8 +69,7 @@ class SolrDocument
   end
 
   def key_filter
-    kf = BuildingOregon::KeyFilter.new(self.keys, METADATA["Exceptions"])
-    kf
+    BuildingOregon::KeyFilter.new(self.keys, METADATA["Exceptions"])
   end
 
 end
