@@ -20,5 +20,6 @@ class CatalogController < ApplicationController
     config.add_field_configuration_to_solr_request!
   end
   self.search_params_logic += [:exclude_unreviewed_items]
+  self.search_params_logic += [:only_building_oregon]
 
 end 

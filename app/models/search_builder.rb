@@ -5,4 +5,9 @@ class SearchBuilder < Blacklight::SearchBuilder
     solr_parameters[:fq] ||= []
     solr_parameters[:fq] << "-reviewed_ssim:\"false\""
   end
+
+  def only_building_oregon(solr_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "desc_metadata__set_sim:\"#{RSolr.escape("http://oregondigital.org/resource/oregondigital:building-or")}\""
+  end
 end
