@@ -1,7 +1,7 @@
 module BuildingOregon
   class KeyFilter
     def initialize(keys, exceptions)
-      @keys ||= keys
+      @keys = keys
       @exceptions = exceptions
     end
 
