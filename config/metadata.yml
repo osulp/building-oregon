@@ -1,7 +1,14 @@
 Facets:
   title: 'desc_metadata__title_ssim'
-  creator: 'desc_metadata__creator_ssim'
-  description: 'desc_metadata__description_ssim'
+  creator: 'desc_metadata__creator_sim'
+  photographer: 'desc_metadata__photographer_label_sim'
+  style period: 'desc_metadata__stylePeriod_label_sim'
+  work type: 'desc_metadata__workType_label_sim'
+  region: 'desc_metadata__location_label_sim'
+  rights: 'desc_metadata__rights_label_sim'
+  type: 'desc_metadata__type_label_sim'
+  format: 'desc_metadata__format_label_sim'
+  decade: 'date_decade_ssim'
 
 Show:
   title: 'desc_metadata__title_ssm'
@@ -13,5 +20,7 @@ Show:
   location: 'desc_metadata__location_label_ssm'
 
 Index:
-  creator: 'desc_metadata__creator_ssm'
-  description: 'desc_metadata__description_ssm'
+  creator: 'desc_metadata__creator_sim'
+  material: 'desc_metadata__material_ssm'
+  date: 'desc_metadata__temporal_ssm'
+  
