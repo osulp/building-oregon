@@ -48,8 +48,8 @@ class SolrDocument
   def coordinates
     [
       self["desc_metadata__title_ssm"],
-      self["desc_metadata__lat_ssm"],
-      self["desc_metadata__long_ssm"]
+      self["desc_metadata__latitude_ssm"],
+      self["desc_metadata__longitude_ssm"]
     ].join("-|-")
   end
 
