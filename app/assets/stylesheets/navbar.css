@@ -48,7 +48,7 @@ form {
   width: 300px;
 }
 
-@media(min-width: 992px) and (max-width: 1680px){
+@media(min-width: 992px){
   #button{
     display: none;
   }
