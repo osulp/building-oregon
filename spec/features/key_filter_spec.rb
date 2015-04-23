@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe BuildingOregon::KeyFilter do
-  let(:filter) {described_class.new(simple_array) }
+  let(:filter) {described_class.new(simple_array, exceptions) }
   let(:simple_array) {["stuff", "things", "banana", "yodawg"]}
   let(:exceptions) {["stuff", "things"]}
   let(:filtered_list) {["banana", "yodawg"]}
@@ -28,9 +28,6 @@ RSpec.describe BuildingOregon::KeyFilter do
   end
 
   context "When using the key filter" do
-    before do
-      filter.exceptions=exceptions
-    end
     it "should take a list of keys and filter them based on exceptions" do
       expect(filter.call).to eq filtered_list
     end
