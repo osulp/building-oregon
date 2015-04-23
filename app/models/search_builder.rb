@@ -8,6 +8,6 @@ class SearchBuilder < Blacklight::SearchBuilder
 
   def only_building_oregon(solr_parameters)
     solr_parameters[:fq] ||= []
-    solr_parameters[:fq] << "desc_metadata__set_sim:\"#{RSolr.escape("http://oregondigital.org/resource/oregondigital:building-or")}\""
+    solr_parameters[:fq] << "desc_metadata__set_sim:\"#{RSolr.solr_escape("http://oregondigital.org/resource/oregondigital:building-or")}\""
   end
 end
