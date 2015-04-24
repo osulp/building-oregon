@@ -55,6 +55,10 @@ class SolrDocument
     ].join("-|-")
   end
 
+  def filter_show_exceptions
+    key_filter.call
+  end
+
   private
 
   def file_distributor
@@ -62,6 +66,10 @@ class SolrDocument
     fd.source_site="http://oregondigital.library.oregonstate.edu/"
     fd.extension=".jpg"
     fd
+  end
+
+  def key_filter
+    BuildingOregon::KeyFilter.new(self.keys, METADATA["Exceptions"])
   end
 
 end

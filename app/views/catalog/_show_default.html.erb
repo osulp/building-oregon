@@ -2,12 +2,10 @@
 
 <%# default partial to display solr document fields in catalog show view -%>
 <dl class="dl-horizontal  dl-invert">
-  <% document_show_fields(document).each do |field_name, field| -%>
-    <% if should_render_show_field? document, field %>
-      <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
-      <dd class="blacklight-<%= field_name.parameterize %>">
-        <%= render_document_show_field_value document, field: field_name %>
-      </dd>
-    <% end -%>
+  <% document.filter_show_exceptions.each do |field_name| -%>
+    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label(document, field: field_name.gsub("desc_metadata__", "").gsub("ssm", "").gsub("ssim", "").gsub("label", "")) %></dt>
+    <dd class="blacklight-<%= field_name.parameterize %>">
+    <%= render_document_show_field_value document, field: field_name, :value => document.build_link(field_name) %>
+    </dd>
   <% end -%>
 </dl>

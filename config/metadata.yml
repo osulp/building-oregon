@@ -23,4 +23,15 @@ Index:
   creator: 'desc_metadata__creator_sim'
   material: 'desc_metadata__material_ssm'
   date: 'desc_metadata__temporal_ssm'
-  
+
+Exceptions:
+  ["reviewed_ssim", "has_thumbnail_bs", "system_create_dtsi", "system_modified_dtsi",
+   "object_state_ssi", "active_fedora_model_ssi", "id", "object_profile_ssm", 
+   "read_access_group_ssim", "workflow_metadata__reviewed_ssm", 
+   "workflow_metadata__reviewed_ssim", "workflow_metadata__has_thumbnail_ssm", 
+   "workflow_metadata__has_thumbnail_ssim", "desc_metadata__title_ssim", 
+   "desc_metadata__title_tesim", "desc_metadata__photographer_ssm", 
+   "desc_metadata__description_tesim", "desc_metadata__location_ssm", 
+   "desc_metadata__type_ssm", "desc_metadata__format_ssm", "has_model_ssim", 
+   "sort_date_desc_dtsi", "sort_date_asc_dtsi", "timestamp", "desc_metadata__rights_ssm", 
+   "desc_metadata__set_ssm", "desc_metadata__lat_ssm", "desc_metadata__long_ssm", "coords_ssim"]
