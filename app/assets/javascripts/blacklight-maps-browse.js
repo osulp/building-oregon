@@ -155,9 +155,7 @@
       var href = "";
       $.each(placenames, function(i,val){
         html += "<ul class='sidebar-list'>";
-        $.each(val, function(j, val2){
-          html += val;
-        });
+        html += val;
         html += "</ul>";
       });
       return html;
