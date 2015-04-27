@@ -44,6 +44,8 @@ class SolrDocument
   def build_link(field)
     Array(self[field]).map do |value|
       BuildingOregon::ControlledValue.new(value).to_s
+    end.select do |value|
+      !value.to_s.start_with?("http")
     end
   end
 
