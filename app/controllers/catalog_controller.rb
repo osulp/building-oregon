@@ -10,6 +10,7 @@ class CatalogController < ApplicationController
   include BuildingOregon::Catalog::MapConfig
   include BuildingOregon::Catalog::SearchConfig
   include BuildingOregon::Catalog::ShowConfig
+  include BuildingOregon::Catalog::SortConfig
 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
