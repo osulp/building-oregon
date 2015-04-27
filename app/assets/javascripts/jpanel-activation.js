@@ -3,6 +3,7 @@ $(document).ready(function() {
     menu: '#facets',
     trigger: '#button',
     duration: 300,
+    excludedPanelContent: "#ajax-modal"
   });
   jPM.on();
 });
