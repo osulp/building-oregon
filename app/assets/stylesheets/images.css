@@ -8,6 +8,16 @@
   display: block;
 }
 
-.document-metadata > .col-md-10 {
-  margin-left: -125px;
+.document-metadata > .fit-screen {
+  padding-right: 25px;
+}
+
+@media(min-width: 992px) {
+  .document-metadata > .fit-screen {
+    margin-left: -100px;
+
+    dd {
+      width: 65%;
+    }
+  }
 }
