@@ -5,7 +5,7 @@ module BuildingOregon
       included do
         configure_blacklight do |config|
           METADATA["Facets"].each_pair do |field, metadata|
-            config.add_facet_field metadata, :label => field, :helper_method => :controlled_label, :limit => 10
+            config.add_facet_field metadata, :label => field.titleize, :helper_method => :controlled_label, :limit => 10
           end
           config.add_facet_fields_to_solr_request!
         end
