@@ -22,10 +22,5 @@ class CatalogController < ApplicationController
   end
   self.search_params_logic += [:exclude_unreviewed_items]
   self.search_params_logic += [:only_building_oregon]
-  def index
-    super
-    if params[:view] != "list"
-      @map_response,_ = search_results(params, search_params_logic+[:max_rows])
-    end
-  end
+
 end 
