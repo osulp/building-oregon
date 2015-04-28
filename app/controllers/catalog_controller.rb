@@ -24,6 +24,8 @@ class CatalogController < ApplicationController
   self.search_params_logic += [:only_building_oregon]
   def index
     super
-    @map_response,_ = search_results(params, search_params_logic+[:max_rows])
+    if params[:view] != "list"
+      @map_response,_ = search_results(params, search_params_logic+[:max_rows])
+    end
   end
 end 
