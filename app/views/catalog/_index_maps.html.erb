@@ -13,9 +13,13 @@
         </div>
         <div class="col-md-6">
           <% #add anything to display in the sidebar here %>
-          <p>Creator: <%= Array.wrap(document[:desc_metadata__creator_ssim]).first %></p>
-          <p>Date: <%= Array.wrap(document[:desc_metadata__temporal_ssm]).first %></p>
-          <p>Material: <%= Array.wrap(document[:desc_metadata__material_ssm]).first %></p>
+          <% if !document[:desc_metadata__creator_ssim].blank? %>
+            <p>Creator: <%= Array.wrap(document[:desc_metadata__creator_ssim]).first %></p>
+          <% elsif !document[:desc_metadata__temporal_ssim].blank?  %>
+            <p>Date: <%= Array.wrap(document[:desc_metadata__temporal_ssm]).first %></p>
+          <% elsif !document[:desc_metadata__material_ssim].blank?  %>
+            <p>Material: <%= Array.wrap(document[:desc_metadata__material_ssm]).first %></p>
+          <% end %>
         </div>
       </div>
     </div>
