@@ -12,10 +12,7 @@
           <img class="thumbnail" src="<%= document.photo_path %>">
         </div>
         <div class="col-md-6">
-          <% #add anything to display in the sidebar here %>
-          <p>Creator: <%= Array.wrap(document[:desc_metadata__creator_ssim]).first %></p>
-          <p>Date: <%= Array.wrap(document[:desc_metadata__temporal_ssm]).first %></p>
-          <p>Material: <%= Array.wrap(document[:desc_metadata__material_ssm]).first %></p>
+          <%= render :partial => "index_fields", :locals => {document:document} %>
         </div>
       </div>
     </div>
