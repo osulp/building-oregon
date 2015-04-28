@@ -1,18 +1,15 @@
-<div class="container">
-  <div class="row">
-
-    <dl class="document-metadata dl-horizontal dl-invert">
-      <div class="col-md-2 col-sm-2">
-        <img class="thumbnail" src='<%= document.photo_path %>'>
-      </div>
-      <div class="col-md-10 col-sm-10">
-        <% index_fields(document).each do |field_name, field| -%>
-          <% if should_render_index_field? document, field %>
-            <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
-            <dd class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_value document, field: field_name %></dd>
-          <% end -%>
+<div class="row">
+  <dl class="document-metadata dl-horizontal dl-invert">
+    <div class="col-md-2 col-sm-2 col-lg-2">
+      <img class="thumbnail" src='<%= document.photo_path %>'>
+    </div>
+    <div class="col-md-10 col-sm-10 col-lg-10 fit-screen">
+      <% index_fields(document).each do |field_name, field| -%>
+        <% if should_render_index_field? document, field %>
+          <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
+          <dd class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_value document, field: field_name %></dd>
         <% end -%>
-      </div>
-    </dl>
-  </div>
+      <% end -%>
+    </div>
+  </dl>
 </div>
