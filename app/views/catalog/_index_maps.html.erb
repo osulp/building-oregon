@@ -12,14 +12,12 @@
           <img class="thumbnail" src="<%= document.photo_path %>">
         </div>
         <div class="col-md-6">
-          <% #add anything to display in the sidebar here %>
-          <% if !document[:desc_metadata__creator_ssim].blank? %>
-            <p>Creator: <%= Array.wrap(document[:desc_metadata__creator_ssim]).first %></p>
-          <% elsif !document[:desc_metadata__temporal_ssim].blank?  %>
-            <p>Date: <%= Array.wrap(document[:desc_metadata__temporal_ssm]).first %></p>
-          <% elsif !document[:desc_metadata__material_ssim].blank?  %>
-            <p>Material: <%= Array.wrap(document[:desc_metadata__material_ssm]).first %></p>
-          <% end %>
+          <% index_fields(document).each do |field_name, field| -%>
+            <% if should_render_index_field? document, field %>
+              <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
+              <dd class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_value document, field: field_name %></dd>
+            <% end -%>
+          <% end -%>
         </div>
       </div>
     </div>
