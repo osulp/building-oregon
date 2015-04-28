@@ -12,12 +12,7 @@
           <img class="thumbnail" src="<%= document.photo_path %>">
         </div>
         <div class="col-md-6">
-          <% index_fields(document).each do |field_name, field| -%>
-            <% if should_render_index_field? document, field %>
-              <dt class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_label document, field: field_name %></dt>
-              <dd class="blacklight-<%= field_name.parameterize %>"><%= render_index_field_value document, field: field_name %></dd>
-            <% end -%>
-          <% end -%>
+          <%= render :partial => "index_fields", :locals => {document:document} %>
         </div>
       </div>
     </div>
