@@ -49,7 +49,6 @@ end
 group :staging, :production do
 gem 'newrelic_rpm', '>= 3.7.3'
 gem 'mysql2'
-gem 'dalli'
 end
 
 gem "jettywrapper", "~> 1.7"

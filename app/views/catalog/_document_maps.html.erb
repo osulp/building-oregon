@@ -2,7 +2,5 @@
 <div id="documents" class="map">
   <%= blacklight_map_tag('blacklight-map') {} %>
   <div id="blacklight-map-sidebar"></div>
-  <% cache([params[:q], params[:f], @map_response.docs.first.id, @map_response.docs.last.id, @map_response.docs.length]) do %>
-    <%= javascript_tag "$('#blacklight-map').blacklight_leaflet_map(#{serialize_geojson});" %>
-  <% end %>
+  <%= javascript_tag "$('#blacklight-map').blacklight_leaflet_map(#{serialize_geojson});" %>
 </div>
