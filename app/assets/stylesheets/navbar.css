@@ -79,7 +79,7 @@ form {
   }
 }
 
-@media(min-width: 480px) and (max-width: 991px){
+@media(max-width: 991px){
   #header-navbar > .container {
     margin-left: 0px;
     margin-right: 0px; 
@@ -148,4 +148,14 @@ form {
   .navbar-form .form-control {
     width: 55%;
   }
+}
+
+@media(max-width: 480px) {
+  .navbar-form .form-control {
+    width: 35% !important;
+  }
+  .logo-size {
+    margin-left: -125px;
+  }
+ 
 }
