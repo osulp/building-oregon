@@ -12,6 +12,11 @@ function resizeMain(){
     footerHeight = links_footer+logoHeight;
   }
   var containerHeight = $('#main-container').outerHeight(true);
+  var sidebarHeight = $('#sidebar').outerHeight(true);
+  var contentHeight = $('#content').outerHeight(true);
+  if(sidebarHeight > contentHeight) {
+    containerHeight = contentHeight
+  }
   var total = windowHeight-footerHeight-navbarHeight;
   if(total > 0) {
     $('#main-container').css('min-height', total);
