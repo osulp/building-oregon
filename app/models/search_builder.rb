@@ -10,4 +10,9 @@ class SearchBuilder < Blacklight::SearchBuilder
     solr_parameters[:fq] ||= []
     solr_parameters[:fq] << "desc_metadata__set_sim:\"#{RSolr.solr_escape("http://oregondigital.org/resource/oregondigital:building-or")}\""
   end
+
+  def only_lat_longs(solr_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "desc_metadata__latitude_teim:[* TO *]"
+  end
 end

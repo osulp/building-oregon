@@ -35,5 +35,21 @@ RSpec.describe CatalogController do
         expect(assigns(:document_list).length).to eq 0
       end
     end
+    context "when there are documents without lat/longs" do
+      before do
+        solr.add({:id => "oregondigital:blah", :reviewed_ssim => ["true"], :desc_metadata__set_sim => ["http://oregondigital.org/resource/oregondigital:building-or"]})
+        solr.commit
+      end
+      context "and a document with lat/longs" do
+        before do
+          solr.add({:id => "oregondigital:blah2", :reviewed_ssim => ["true"], :desc_metadata__set_sim => ["http://oregondigital.org/resource/oregondigital:building-or"], :desc_metadata__latitude_teim => "9001"})
+          solr.commit
+          get :index
+        end
+        it "should return the one with the lat/long" do
+          expect(assigns(:document_list).length).to eq 1
+        end
+      end
+    end
   end
 end
