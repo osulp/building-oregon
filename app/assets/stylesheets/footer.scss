@@ -1,0 +1,18 @@
+.white {
+  color: white;
+  margin-top: 13px;
+}
+#dynamicFooter {
+  .links {
+    text-align: center;
+  }
+  .logos {
+    *:first-child {
+      text-align: left;
+    }
+    *:last-child {
+      text-align: right;
+    }
+  }
+}
+
