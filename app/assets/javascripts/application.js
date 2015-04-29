@@ -16,8 +16,9 @@
 //Required for dynamic styling of main page
 //= require footer
 //
-//Required for toggling button glyphicon
+//Required for toggling button glyphicon/slide-toggle-button
 //= require toggleGlyphicon
+//= require slide_button_toggle
 //
 //Required for Popout to work
 //= require jpanel
