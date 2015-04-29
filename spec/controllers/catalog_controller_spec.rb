@@ -15,24 +15,49 @@ RSpec.describe CatalogController do
         expect(assigns(:document_list).length).to eq 2
       end
     end
+    let(:document) do
+      {:id => "good", :reviewed_ssim => "true", :desc_metadata__set_sim => "http://oregondigital.org/resource/oregondigital:building-or", :desc_metadata__latitude_teim => "9001"}
+    end
+    def bad_document(attributes={})
+      document.merge({:id => "bad"}.merge(attributes))
+    end
+    it "should work" do
+      solr.add(document)
+      solr.commit
+      get :index
+      expect(assigns(:document_list).length).to eq 1
+    end
     context "when there are unreviewed documents" do
       before do
-        solr.add({:id => "bad_doc", :reviewed_ssim => "false", :desc_metadata__set_ssm => "http://oregondigital.org/resource/oregondigital:building-or"})
+        solr.add(document)
+        solr.add(bad_document(:reviewed_ssim => "false"))
         solr.commit
         get :index
       end
       it "should not return them" do
-        expect(assigns(:document_list).length).to eq 0
+        expect(assigns(:document_list).length).to eq 1
       end
     end
     context "when there are documents in the wrong collection" do
       before do
-        solr.add({:id => "bad_doc", :reviewed_ssim => "true", :desc_metadata__set_ssm => "http://oregondigital.org/resource/oregondigital:building-or"})
+        solr.add(document)
+        solr.add(bad_document(:desc_metadata__set_sim => "bad_set"))
         solr.commit
         get :index
       end
       it "should not return them" do
-        expect(assigns(:document_list).length).to eq 0
+        expect(assigns(:document_list).length).to eq 1
+      end
+    end
+    context "when there are documents without lat/longs" do
+      before do
+        solr.add(document)
+        solr.add(bad_document(:desc_metadata__latitude_teim => nil))
+        solr.commit
+        get :index
+      end
+      it "should return the one with the lat/long" do
+        expect(assigns(:document_list).length).to eq 1
       end
     end
   end
