@@ -6,4 +6,5 @@ function resizeMain(){
   var containerPos = $('#main-container').offset().top;
   var total = windowHeight-containerPos-footerHeight;
   $('#main-container').css('min-height', total);
+  $('#blacklight-map').css('height', total);
 }

@@ -19,6 +19,9 @@
 //Required for toggling button glyphicon
 //= require toggleGlyphicon
 //
+//Required for toggling the search text off on small screen
+//= require replace_search_text
+//
 //Required for Popout to work
 //= require jpanel
 //= require jpanel-activation

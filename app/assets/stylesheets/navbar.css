@@ -151,11 +151,15 @@ form {
 }
 
 @media(max-width: 480px) {
-  .navbar-form .form-control {
-    width: 35% !important;
-  }
-  .logo-size {
-    margin-left: -125px;
+  select#search_field.search_field.form-control {
+    width: 100px;
   }
  
+  .navbar-form .form-control {
+    width: 45%;
+  }
+  .logo-size {
+    margin-left: -85px;
+    width: 225px;
+  }
 }
