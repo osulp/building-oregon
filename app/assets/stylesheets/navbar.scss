@@ -65,7 +65,7 @@ form {
   .navbar-header {
     width: 100%;
   }
-  #search-bar .search-query-form {
+  #search-navbar .search-query-form {
     width: 100%;
   }
   .navbar-form .form-control {
@@ -162,7 +162,4 @@ form {
     margin-left: -85px;
     width: 225px;
   }
-}
-#search-bar {
-  @extend #search-navbar
 }
