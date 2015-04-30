@@ -17,6 +17,7 @@
     this.each(function() {
       options.id = this.id;
 
+      if(!window.map || typeof window.map === 'undefined') {
       // Setup Leaflet map
         if(L.Browser.mobile){
           var map_opts = {dragging: false, tap: false, minZoom: 8}
@@ -29,46 +30,67 @@
           attribution: options.mapattribution,
           maxZoom: options.maxzoom,
         }).addTo(map);
+        // Initialize sidebar
+        sidebar = L.control.sidebar(options.sidebar, {
+          position: 'right',
+          autoPan: false
+        });
 
-      // Initialize sidebar
-      sidebar = L.control.sidebar(options.sidebar, {
-        position: 'right',
-        autoPan: false
-      });
+        // Adds leaflet-sidebar control to map
+        map.addControl(sidebar);
 
-      // Adds leaflet-sidebar control to map
-      map.addControl(sidebar);
+        // Create location marker icon
+        var locationIcon = L.icon({
+          iconUrl: 'http://www.lscarolinas.net/assets/leaflet/images/marker-icon-blue.png',
+          iconAnchor: [13, 12]
+        });
+        // Sets the options for the getCurrentLocation function
+        var opts = {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+        };
 
+        // Creates the marker at the default location
+        if(navigator.geolocation) {
+          var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
+        }
+        // Puts the marker on the map if the get location was successful
+        var success = function (position) {
+          locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
+        }
+       // Gets the current location on map load
+       document.onload = getLocation();
+        function getLocation() {
+          if(navigator.geolocation) {
+            navigator.geolocation.watchPosition(success, function () {}, opts);
+          }
+        }
+        //Add click listener to map
+        map.on('click drag', hideSidebar);
+      }
+      map = window.map
+      if(typeof window.markers !== 'undefined') {
+        map.removeLayer(window.markers)
+      }
       // Create a marker cluster object and set options
-      markers = new L.MarkerClusterGroup({
+      window.markers = new L.MarkerClusterGroup({
         showCoverageOnHover: false,
         spiderfyOnMaxZoom: false,
         maxClusterRadius: 10,
         singleMarkerMode: true,
         animateAddingMarkers: true
       });
-
-      // Create location marker icon
-      var locationIcon = L.icon({
-        iconUrl: 'http://www.lscarolinas.net/assets/leaflet/images/marker-icon-blue.png',
-        iconAnchor: [13, 12]
-      });
-
-      // Sets the options for the getCurrentLocation function
-      var opts = {
-        enableHighAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0
-      };
-
-      // Creates the marker at the default location
-      if(navigator.geolocation) {
-        var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
+      markers = window.markers;
+      if(window.reset_button) {
+        window.map.removeControl(window.reset_button);
       }
-      // Puts the marker on the map if the get location was successful
-      var success = function (position) {
-        locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
+      if(markers.count > 0) {
+        var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.fitBounds(window.markers.getBounds())},'Reset Map')
+      } else {
+        var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
       }
+      window.reset_button = myButton
 
       // Creates the geoJsonLayer
       geoJsonLayer = L.geoJson(geojson_docs, {
@@ -85,13 +107,6 @@
       // Add GeoJSON layer to marker cluster object
       markers.addLayer(geoJsonLayer);
 
-     // Gets the current location on map load
-     document.onload = getLocation();
-      function getLocation() {
-        if(navigator.geolocation) {
-          navigator.geolocation.watchPosition(success, function () {}, opts);
-        }
-      }
 
       // Add marker cluster object to map
       map.addLayer(markers);
@@ -99,6 +114,8 @@
       // Zooms to show all points on map
       if((geojson_docs.features.length > 0)) {
         map.fitBounds(markers.getBounds());
+      } else {
+        map.setView([44.5620, -123.02], 2);
       }
 
       // Listeners for marker cluster clicks
@@ -113,17 +130,8 @@
         }
       });
 
-      //Add click listener to map
-      map.on('click drag', hideSidebar);
 
     });
-
-    if(markers.count > 0) {
-    var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.fitBounds(markers.getBounds())},'Reset Map')
-    }
-    else {
-      var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
-    }
 
     function setupSidebarDisplay(e, placenames){
       hideSidebar();
