@@ -16,8 +16,11 @@
     // Display the map
     this.each(function() {
       options.id = this.id;
+      firstInitialization = false
 
+      if(!window.map || typeof window.map === 'undefined') {
       // Setup Leaflet map
+        firstInitialization = true
         if(L.Browser.mobile){
           var map_opts = {dragging: false, tap: false, minZoom: 8}
         }else{
@@ -29,49 +32,83 @@
           attribution: options.mapattribution,
           maxZoom: options.maxzoom,
         }).addTo(map);
+        // Initialize sidebar
+        sidebar = L.control.sidebar(options.sidebar, {
+          position: 'right',
+          autoPan: false
+        });
 
-      // Initialize sidebar
-      sidebar = L.control.sidebar(options.sidebar, {
-        position: 'right',
-        autoPan: false
-      });
+        // Adds leaflet-sidebar control to map
+        map.addControl(sidebar);
 
-      // Adds leaflet-sidebar control to map
-      map.addControl(sidebar);
+        // Create location marker icon
+        var locationIcon = L.icon({
+          iconUrl: 'http://www.lscarolinas.net/assets/leaflet/images/marker-icon-blue.png',
+          iconAnchor: [13, 12]
+        });
+        // Sets the options for the getCurrentLocation function
+        var opts = {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+        };
 
-      // Create a marker cluster object and set options
-      markers = new L.MarkerClusterGroup({
-        showCoverageOnHover: false,
-        spiderfyOnMaxZoom: false,
-        maxClusterRadius: 10,
-        singleMarkerMode: true,
-        animateAddingMarkers: true
-      });
-
-      // Create location marker icon
-      var locationIcon = L.icon({
-        iconUrl: 'http://www.lscarolinas.net/assets/leaflet/images/marker-icon-blue.png',
-        iconAnchor: [13, 12]
-      });
-
-      // Sets the options for the getCurrentLocation function
-      var opts = {
-        enableHighAccuracy: true,
-        timeout: 5000,
-        maximumAge: 0
-      };
-
-      // Creates the marker at the default location
-      if(navigator.geolocation) {
-        var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
+        // Creates the marker at the default location
+        if(navigator.geolocation) {
+          var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
+        }
+        // Puts the marker on the map if the get location was successful
+        var success = function (position) {
+          locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
+        }
+       // Gets the current location on map load
+       document.onload = getLocation();
+        function getLocation() {
+          if(navigator.geolocation) {
+            navigator.geolocation.watchPosition(success, function () {}, opts);
+          }
+        }
+        //Add click listener to map
+        map.on('click drag', hideSidebar);
+        window.sidebar = sidebar
+          var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){
+            if(window.markers) {
+              window.map.fitBounds(window.markers.getBounds())
+            } else {
+              window.map.setView([44.5620, -123.02], 2)
+            }
+      },'Reset Map')
       }
-      // Puts the marker on the map if the get location was successful
-      var success = function (position) {
-        locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
+      map = window.map
+      sidebar = window.sidebar
+      if(typeof window.markers !== 'undefined') {
+        map.removeLayer(window.markers)
+      }
+      // Create a marker cluster object and set options
+      window.markers = new L.MarkerClusterGroup({
+        showCoverageOnHover: false,
+      spiderfyOnMaxZoom: false,
+      maxClusterRadius: 10,
+      singleMarkerMode: true,
+      animateAddingMarkers: true
+      });
+      markers = window.markers;
+      if(typeof window.all_geojson === 'undefined') {
+        window.all_geojson = geojson_docs;
+      } else {
+        features = window.all_geojson.features;
+        new_features = geojson_docs.features;
+        string_features = $.map(features, JSON.stringify)
+        $.each(new_features, function(index, value) {
+          if ($.inArray(JSON.stringify(value), string_features)==-1) {
+            features.push(value)
+          }
+        });
+        window.all_geojson.features = features
       }
 
       // Creates the geoJsonLayer
-      geoJsonLayer = L.geoJson(geojson_docs, {
+      geoJsonLayer = L.geoJson(window.all_geojson, {
         onEachFeature: function(feature, layer){
           layer.defaultOptions.title = getMapTitle(options.type, feature.properties.name);
           layer.on('click', function(e){
@@ -82,24 +119,14 @@
         }
       });
 
+      window.layer = geoJsonLayer
+
       // Add GeoJSON layer to marker cluster object
       markers.addLayer(geoJsonLayer);
 
-     // Gets the current location on map load
-     document.onload = getLocation();
-      function getLocation() {
-        if(navigator.geolocation) {
-          navigator.geolocation.watchPosition(success, function () {}, opts);
-        }
-      }
 
       // Add marker cluster object to map
       map.addLayer(markers);
-
-      // Zooms to show all points on map
-      if((geojson_docs.features.length > 0)) {
-        map.fitBounds(markers.getBounds());
-      }
 
       // Listeners for marker cluster clicks
       markers.on('clusterclick', function(e){
@@ -113,17 +140,8 @@
         }
       });
 
-      //Add click listener to map
-      map.on('click drag', hideSidebar);
 
     });
-
-    if(markers.count > 0) {
-    var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.fitBounds(markers.getBounds())},'Reset Map')
-    }
-    else {
-      var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
-    }
 
     function setupSidebarDisplay(e, placenames){
       hideSidebar();
