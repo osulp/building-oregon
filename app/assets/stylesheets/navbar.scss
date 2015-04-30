@@ -37,7 +37,7 @@ form {
   border-color: white;
 }
 .move-down{
-  margin-top: 10px
+  margin-top: 4px
 }
 .black{
   background-color: black;
@@ -47,9 +47,22 @@ form {
   width: 300px;
 }
 
+@media(min-width: 1200px) {
+  .cite-navbar {
+    margin-right: -40px;
+    margin-left: 10px;
+  }
+}
+
 @media(min-width: 992px){
   #button{
     display: none;
+  }
+  .collapse.navbar-collapse {
+    margin-left: 20px;
+  }
+  #search-navbar {
+    margin-top: 2px;
   }
   .logo-size {
     top: 10%;
@@ -58,8 +71,9 @@ form {
     margin-left: -150px;
   }
   #user-util-collapse {
-    width: 200px;
+    width: 120px;
     padding-left: 0px;
+    margin-right: -50px;
   }
   .navbar-header {
     width: 100%;
@@ -68,7 +82,7 @@ form {
     width: 100%;
   }
   .navbar-form .form-control {
-    width: 50%;
+    width: 60%;
   }
   select#search_field.search_field.form-control {
     width: 100px;
@@ -81,7 +95,8 @@ form {
 @media(max-width: 991px){
   #header-navbar > .container {
     margin-left: 0px;
-    margin-right: 0px; 
+    margin-right: 0px;
+    height: 125px !important; 
   } 
   .navbar-inverse .navbar-form { 
     margin-top: 15px;
@@ -112,11 +127,12 @@ form {
     font-size: 15px;
   }
   .logo-size {
-    top: 10%;
+    top: 5%;
     left: 50%;
     position: absolute;
     margin-top: 5px;
     margin-left: -150px;
+    height: 80px;
   }
   #user-util-collapse {
     display: none !important;
@@ -129,6 +145,10 @@ form {
   }
   #header-navbar > .container {
     height: 150px;
+  }
+  #search-navbar {
+    margin-top: -20px;
+    margin-bottom: -20px;
   }
   .input-group {
     width: 100%;
