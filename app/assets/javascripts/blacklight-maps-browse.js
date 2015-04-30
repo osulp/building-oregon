@@ -16,9 +16,11 @@
     // Display the map
     this.each(function() {
       options.id = this.id;
+      firstInitialization = false
 
       if(!window.map || typeof window.map === 'undefined') {
       // Setup Leaflet map
+        firstInitialization = true
         if(L.Browser.mobile){
           var map_opts = {dragging: false, tap: false, minZoom: 8}
         }else{
@@ -68,32 +70,45 @@
         }
         //Add click listener to map
         map.on('click drag', hideSidebar);
+        window.sidebar = sidebar
+          var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){
+            if(window.markers) {
+              window.map.fitBounds(window.markers.getBounds())
+            } else {
+              window.map.setView([44.5620, -123.02], 2)
+            }
+      },'Reset Map')
       }
       map = window.map
+      sidebar = window.sidebar
       if(typeof window.markers !== 'undefined') {
         map.removeLayer(window.markers)
       }
       // Create a marker cluster object and set options
       window.markers = new L.MarkerClusterGroup({
         showCoverageOnHover: false,
-        spiderfyOnMaxZoom: false,
-        maxClusterRadius: 10,
-        singleMarkerMode: true,
-        animateAddingMarkers: true
+      spiderfyOnMaxZoom: false,
+      maxClusterRadius: 10,
+      singleMarkerMode: true,
+      animateAddingMarkers: true
       });
       markers = window.markers;
-      if(window.reset_button) {
-        window.map.removeControl(window.reset_button);
-      }
-      if(markers.count > 0) {
-        var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.fitBounds(window.markers.getBounds())},'Reset Map')
+      if(typeof window.all_geojson === 'undefined') {
+        window.all_geojson = geojson_docs;
       } else {
-        var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){map.setView([44.5620, -123.02], 2)},'Reset Map')
+        features = window.all_geojson.features;
+        new_features = geojson_docs.features;
+        string_features = $.map(features, JSON.stringify)
+        $.each(new_features, function(index, value) {
+          if ($.inArray(JSON.stringify(value), string_features)==-1) {
+            features.push(value)
+          }
+        });
+        window.all_geojson.features = features
       }
-      window.reset_button = myButton
 
       // Creates the geoJsonLayer
-      geoJsonLayer = L.geoJson(geojson_docs, {
+      geoJsonLayer = L.geoJson(window.all_geojson, {
         onEachFeature: function(feature, layer){
           layer.defaultOptions.title = getMapTitle(options.type, feature.properties.name);
           layer.on('click', function(e){
@@ -104,19 +119,14 @@
         }
       });
 
+      window.layer = geoJsonLayer
+
       // Add GeoJSON layer to marker cluster object
       markers.addLayer(geoJsonLayer);
 
 
       // Add marker cluster object to map
       map.addLayer(markers);
-
-      // Zooms to show all points on map
-      if((geojson_docs.features.length > 0)) {
-        map.fitBounds(markers.getBounds());
-      } else {
-        map.setView([44.5620, -123.02], 2);
-      }
 
       // Listeners for marker cluster clicks
       markers.on('clusterclick', function(e){

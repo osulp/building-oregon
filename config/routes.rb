@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/about', :to => 'about#index', :as => 'about_index'
   get '/contact', :to => 'contact#index', :as => "contact"
   get '/help', :to => 'help#index', :as => "help"
-  get '/geo/nearby', :to => 'geo#nearby', :as => "nearby_geo"
+  get '/geo/frame', :to => 'geo#frame', :as => "frame_geo"
 
   namespace :admin do
     resources :coordinates

@@ -8,8 +8,8 @@ class GeoController < ApplicationController
   self.search_params_logic += [:only_lat_longs]
   self.search_params_logic += [:distance_query]
 
-  def nearby
-    nearby_results, _ = get_search_results(geo_params, {:rows => 10000})
+  def frame
+    nearby_results, _ = search_results(params.merge({:rows => 500, :page => nil}), search_params_logic)
     documents = nearby_results.docs
     respond_with geojson(documents)
   end
@@ -18,9 +18,5 @@ class GeoController < ApplicationController
 
   def geojson(documents)
     BlacklightMaps::GeojsonExport.new(self, documents).to_geojson
-  end
-
-  def geo_params
-    params.slice(:latitude, :longitude, :distance)
   end
 end
