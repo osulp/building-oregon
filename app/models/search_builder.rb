@@ -19,25 +19,8 @@ class SearchBuilder < Blacklight::SearchBuilder
   def distance_query(solr_parameters)
     solr_parameters[:fq] ||= []
     if blacklight_params[:northeast] && blacklight_params[:southwest]
-      solr_parameters[:fq] << FrameQueryGenerator.new(*blacklight_params.slice(:southwest, :northeast).values).to_s
+      solr_parameters[:fq] << BuildingOregon::FrameQueryGenerator.new(*blacklight_params.slice(:southwest, :northeast).values).to_s
     end
   end
 end
 
-class FrameQueryGenerator
-  attr_reader :southwest, :northeast
-  def initialize(southwest, northeast)
-    @southwest = southwest
-    @northeast = northeast
-  end
-
-  def to_s
-    "#{field}:[#{southwest} TO #{northeast}]"
-  end
-
-  private
-
-  def field
-    "desc_metadata__coordinates_llsim"
-  end
-end
