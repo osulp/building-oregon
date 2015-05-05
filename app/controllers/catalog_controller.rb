@@ -16,7 +16,8 @@ class CatalogController < ApplicationController
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = { 
       :qt => 'search',
-      :rows => 10 
+      :rows => 10 ,
+      :qf => "all_text_timv"
     }
     config.add_field_configuration_to_solr_request!
   end
