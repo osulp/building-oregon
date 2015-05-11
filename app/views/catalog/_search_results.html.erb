@@ -1,0 +1,38 @@
+<h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
+
+<% @page_title = t('blacklight.search.title', :application_name => application_name) %>
+
+
+<% content_for(:head) do -%>
+  <%= render_opensearch_response_metadata %>
+  <%= auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') ) %>
+  <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
+<% end -%>
+<div role='tabpanel'>
+  <ul id="myTab" class="nav nav-tabs" role='tablist'>
+    <li role="presentation" class="active"><a href="#theMap" id="map-tab" role='tab' data-toggle="tab" data-target="#theMap">Map</a></li>
+    <li role="presentation"><a href="#index" id="index-tab" role='tab' data-toggle="tab" data-target="#index">Index</a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div role='tabpanel' class="tab-pane fade active in" id="theMap">
+      <div id="documents" class="map">
+        <%= render :partial => 'map' %>
+      </div>
+    </div>
+    <div role='tabpanel' class="tab-pane fade" id="index">
+      <%= render 'search_header' %>
+
+      <h2 class="sr-only"><%= t('blacklight.search.search_results') %></h2>
+
+      <%- if @response.empty? %>
+        <%= render "zero_results" %>
+      <%- elsif render_grouped_response? %>
+        <%= render_grouped_document_index %>
+      <%- else %>
+        <%= render_document_index %>
+      <%- end %>
+      <%= render 'results_pagination' %>
+    
+    </div>
+  </div>
+</div>
