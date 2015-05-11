@@ -9,11 +9,11 @@
   <%= auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') ) %>
 <% end -%>
 <div role='tabpanel'>
-  <ul id="myTab" class="nav nav-tabs" role='tablist'>
+  <ul id="view-tabs" class="nav nav-tabs" role='tablist'>
     <li role="presentation" class="active"><a href="#theMap" id="map-tab" role='tab' data-toggle="tab" data-target="#theMap">Map</a></li>
-    <li role="presentation"><a href="#index" id="index-tab" role='tab' data-toggle="tab" data-target="#index">Index</a></li>
+    <li role="presentation"><a href="#index" id="index-tab" role='tab' data-toggle="tab" data-target="#index">List</a></li>
   </ul>
-  <div id="myTabContent" class="tab-content">
+  <div id="view-tab-content" class="tab-content">
     <div role='tabpanel' class="tab-pane fade active in" id="theMap">
       <div id="documents" class="map">
         <%= render :partial => 'map' %>
