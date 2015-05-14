@@ -5,8 +5,7 @@ describe "admin" do
   context "when logged in as an admin" do
     before do
       capybara_login(user) if user
-      visit root_path
-      click_link "Admin Panel"
+      visit admin_index_path
     end
     it "should display the admin panel" do
       expect(page).to have_link("Coordinate Object Information")
