@@ -7,6 +7,7 @@ module BuildingOregon
 
     def sanitize
       remove_metadata_tag
+      @field
     end
 
     private
@@ -18,7 +19,6 @@ module BuildingOregon
 
     def remove_format
       format_list.each {|format| @field.gsub!(format, "")}
-      @field
     end
 
     def format_list

@@ -50,7 +50,7 @@ class SolrDocument
   end
   
   def sanitize_field(field)
-    field_sanitizer(field).sanitize
+    field_sanitizer.new(field).sanitize
   end
 
   def coordinates
@@ -67,8 +67,8 @@ class SolrDocument
 
   private
 
-  def field_sanitizer(field)
-    BuildingOregon::FieldSanitizer.new(field) 
+  def field_sanitizer
+    BuildingOregon::FieldSanitizer
   end
 
   def file_distributor
