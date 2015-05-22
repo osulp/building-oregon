@@ -15,4 +15,18 @@
     }
   }
 }
+@media(max-width: 992px) {
+  .first-logo {
+    display: none;
+  }
+  .second-logo {
+    display: none;
+  }
+  .left {
+    float: left;
+  }
+  .white > a:hover {
+    color: #f5dbb2; 
+  }
+}
 

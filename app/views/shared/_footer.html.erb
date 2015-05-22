@@ -3,27 +3,23 @@
     <div class="row logos">
       <div class="col-xs-6">
         <a href="http://library.uoregon.edu">
-          <%= image_tag "uolib_white.gif" %>
+          <%= image_tag "uolib_white.gif", :class => "first-logo" %>
         </a>
       </div>
       <div class="col-xs-6">
         <a href="http://library.oregonstate.edu">
-          <%= image_tag "osulib_white.gif" %>
+          <%= image_tag "osulib_white.gif", :class => "second-logo" %>
         </a>
       </div>
     </div>
     <div class="black row links">
-      <div class="col-xs-3">
-        <a class="white" href="https://oregondigital.org/contact"> Contact Us </a>
-      </div>
-      <div class="col-xs-3">
-        <a class="white" href="https://oregondigital.org/copyright"> Copyright </a>
-      </div>
-      <div class="col-xs-3">
-        <%= link_to "Help", help_path  %>
-      </div>
-      <div class="col-xs-3">
-        <%= link_to "About Us", about_index_path %>
+      <div class="col-xs-12 col-md-offset-4 col-md-4">
+        <p class="white left">
+          <a class="white" href="https://oregondigital.org/contact"> Contact Us </a> | 
+          <a class="white" href="https://oregondigital.org/copyright"> Copyrights </a> | 
+          <%= link_to "Help", help_path, :class => "white" %> | 
+          <%= link_to "About Us", about_index_path, :class => "white"  %>
+        </p>
       </div>
     </div>
   </div>
