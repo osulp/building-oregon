@@ -48,6 +48,10 @@ class SolrDocument
       !value.to_s.start_with?("http")
     end
   end
+  
+  def sanitize_field(field)
+    field_sanitizer.new(field).sanitize
+  end
 
   def coordinates
     [
@@ -62,6 +66,10 @@ class SolrDocument
   end
 
   private
+
+  def field_sanitizer
+    BuildingOregon::FieldSanitizer
+  end
 
   def file_distributor
     fd = BuildingOregon::FileDistributor.new(self.id)

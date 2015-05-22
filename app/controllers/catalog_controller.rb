@@ -9,7 +9,6 @@ class CatalogController < ApplicationController
   include BuildingOregon::Catalog::IndexConfig
   include BuildingOregon::Catalog::MapConfig
   include BuildingOregon::Catalog::SearchConfig
-  include BuildingOregon::Catalog::ShowConfig
   include BuildingOregon::Catalog::SortConfig
 
   configure_blacklight do |config|
@@ -19,6 +18,7 @@ class CatalogController < ApplicationController
       :rows => 10 
     }
     config.add_field_configuration_to_solr_request!
+    config.default_per_page = 100
   end
   self.search_params_logic += [:exclude_unreviewed_items]
   self.search_params_logic += [:only_building_oregon]
