@@ -16,12 +16,14 @@
   }
 }
 @media(max-width: 992px) {
-  .first-logo {
-    display: none;
-  }
-  .second-logo {
-    display: none;
-  }
+  .logos {
+    *:first-child {
+      display: none;
+    }
+    *:last-child {
+      display: none;
+    }
+  } 
   .left {
     float: left;
   }
