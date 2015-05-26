@@ -19,6 +19,7 @@
 //Required for toggling button glyphicon/slide-toggle-button
 //= require toggleGlyphicon
 //= require slide_button_toggle
+//= require toggle-tabs
 //
 //Required for Popout to work
 //= require jpanel
@@ -38,5 +39,6 @@
 //= require easyButton
 //= require blacklight-maps
 //= require blacklight-maps-browse
+//= require bootstrap/tab
 //
 //= require_tree .

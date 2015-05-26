@@ -21,5 +21,9 @@ function resizeMain(){
   if(total > 0) {
     $('#main-container').css('min-height', total);
   }
-  $('#blacklight-map').css('height', total-containerHeight);
+  if($("#theMap").length > 0){
+    $('#blacklight-map').css('height', total);
+  }else{
+    $('#blacklight-map').css('height', total-containerHeight);
+  } 
 }
