@@ -2,10 +2,15 @@
   color: white;
   margin-top: 13px;
 }
-.white > a {
-  color: white; 
+.links {
+  p{
+    color: white; 
+  }
+  a {
+    color: white;
+  }
 }
-.white > a:hover {
+.links a:hover {
   color: #f5dbb2; 
 }
 
