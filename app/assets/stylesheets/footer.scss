@@ -2,6 +2,14 @@
   color: white;
   margin-top: 13px;
 }
+.white > a {
+  color: white; 
+}
+.white > a:hover {
+  color: #f5dbb2; 
+}
+
+
 #dynamicFooter {
   .links {
     text-align: center;
@@ -26,9 +34,6 @@
   } 
   .left {
     float: left;
-  }
-  .white > a:hover {
-    color: #f5dbb2; 
   }
 }
 
