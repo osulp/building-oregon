@@ -53,27 +53,16 @@
           maximumAge: 0
         };
 
-        // Creates the marker at the default location
-        if(navigator.geolocation) {
-          var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
-        }
         // Puts the marker on the map if the get location was successful
         var success = function (position) {
           locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
-        }
-       // Gets the current location on map load
-       document.onload = getLocation();
-        function getLocation() {
-          if(navigator.geolocation) {
-            navigator.geolocation.watchPosition(success, function () {}, opts);
-          }
         }
         //Add click listener to map
         map.on('click drag', hideSidebar);
         window.sidebar = sidebar
           var myButton = L.easyButton('glyphicon glyphicon-screenshot',function(){
             if(window.markers) {
-              window.map.fitBounds(window.markers.getBounds())
+              map.locate({setView: true, maxZoom: 16}); 
             } else {
               window.map.setView([44.5620, -123.02], 2)
             }
