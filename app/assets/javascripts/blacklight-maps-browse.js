@@ -68,6 +68,12 @@
             }
       },'Reset Map')
       }
+      function onLocationFound(e) {
+          L.marker(e.latlng).addTo(map);
+      }
+ 
+      map.on('locationfound', onLocationFound);
+
       map = window.map
       sidebar = window.sidebar
       if(typeof window.markers !== 'undefined') {
