@@ -16,7 +16,7 @@ RSpec.describe CatalogController do
       end
     end
     let(:document) do
-      {:id => "good", :reviewed_ssim => "true", :desc_metadata__set_sim => "http://oregondigital.org/resource/oregondigital:building-or", :desc_metadata__latitude_teim => "9001", :desc_metadata__format_label_sim => "Image$http://purl.org/dc/dcmitype/Image"}
+      {:id => "good", :reviewed_ssim => "true", :desc_metadata__set_sim => "http://oregondigital.org/resource/oregondigital:building-or", :desc_metadata__latitude_teim => "9001", :desc_metadata__format_label_sim => "image/tiff$http://purl.org/NET/mediatypes/image/tiff"}
     end
     def bad_document(attributes={})
       document.merge({:id => "bad"}.merge(attributes))
