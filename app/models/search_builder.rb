@@ -6,6 +6,11 @@ class SearchBuilder < Blacklight::SearchBuilder
     solr_parameters[:fq] << "-reviewed_ssim:\"false\""
   end
 
+  def only_images(solr_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "desc_metadata__type_label_sim:\"Image$http://purl.org/dc/dcmitype/Image\""
+  end
+
   def only_building_oregon(solr_parameters)
     solr_parameters[:fq] ||= []
     solr_parameters[:fq] << "desc_metadata__set_sim:\"#{RSolr.solr_escape("http://oregondigital.org/resource/oregondigital:building-or")}\""
