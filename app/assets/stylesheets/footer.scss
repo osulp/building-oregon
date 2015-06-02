@@ -1,7 +1,16 @@
-.white {
-  color: white;
-  margin-top: 13px;
+.links {
+  p{
+    color: white; 
+  }
+  a {
+    color: white;
+  }
 }
+.links a:hover {
+  color: #f5dbb2; 
+}
+
+
 #dynamicFooter {
   .links {
     text-align: center;
@@ -13,6 +22,19 @@
     *:last-child {
       text-align: right;
     }
+  }
+}
+@media(max-width: 992px) {
+  .logos {
+    *:first-child {
+      display: none;
+    }
+    *:last-child {
+      display: none;
+    }
+  } 
+  .left {
+    float: left;
   }
 }
 

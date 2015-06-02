@@ -13,7 +13,7 @@ describe "index page" do
     end
 
     it "should have a link to the about page" do
-      expect(page).to have_link('About Us')
+      expect(page).to have_link('About')
     end
 
     it "should have a link to the contact us page" do

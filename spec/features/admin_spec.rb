@@ -31,7 +31,7 @@ describe "admin" do
             fill_in "Value", :with => "about info"
             click_button "Update Setting"
           end
-          click_link "About Us"
+          click_link "About"
         end
         it "should display new about info on about page" do
           expect(page).to have_content("about info")
