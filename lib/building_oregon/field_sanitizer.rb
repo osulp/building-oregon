@@ -7,6 +7,7 @@ module BuildingOregon
 
     def sanitize
       remove_metadata_tag
+      map_multiword_field
       @field
     end
 
@@ -17,8 +18,24 @@ module BuildingOregon
       remove_format
     end
 
+    def map_multiword_field
+      @field = multi_word_fields[@field] if multi_word_fields.key?(@field) 
+    end
+
     def remove_format
       format_list.each {|format| @field.gsub!(format, "")}
+    end
+
+    def multi_word_fields
+      {
+        "worktype" => "Work Type",
+        "streetaddress" => "Street Address",
+        "itemlocator" => "Item Locator",
+        "ispartof" => "Is part of",
+        "rightsholder" => "Rights Holder",
+        "styleperiod" => "Style Period",
+        "viewdate" => "View Date",
+      }
     end
 
     def format_list

@@ -34,4 +34,4 @@ Exceptions:
    "desc_metadata__type_ssm", "desc_metadata__format_ssm", "has_model_ssim", 
    "sort_date_desc_dtsi", "sort_date_asc_dtsi", "timestamp", "desc_metadata__rights_ssm", 
    "desc_metadata__set_ssm", "desc_metadata__lat_ssm", "desc_metadata__long_ssm", 
-   "coords_ssim", "desc_metadata__creator_ssm", "date_decades_ssim"]
+   "coords_ssim", "desc_metadata__creator_ssm", "date_decades_ssim", "desc_metadata__latitude_ssm", "desc_metadata__longitude_ssm", "desc_metadata__set_label_ssm", "desc_metadata__creator_label_ssm"]
