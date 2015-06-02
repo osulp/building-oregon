@@ -21,6 +21,7 @@ class CatalogController < ApplicationController
     config.default_per_page = 100
   end
   self.search_params_logic += [:exclude_unreviewed_items]
+  self.search_params_logic += [:only_images]
   self.search_params_logic += [:only_building_oregon]
   self.search_params_logic += [:only_lat_longs]
 end 
