@@ -4,9 +4,12 @@ jQuery ->
     window.map?.on('moveend', window.UserUpdater.map_moved)
     window.map?.on('locationfound', window.UserUpdater.user_found)
     if window.location.search == ""
-      window.map?.locate(setView: true)
+      setTimeout ->
+        window.map?.locate(setView: true)
+      , 50
     else
       window.map?.fitBounds(window.markers.getBounds())
+  true
 class UserUpdater
   constructor: ->
   user_found: =>
