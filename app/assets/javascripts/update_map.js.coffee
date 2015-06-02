@@ -7,6 +7,7 @@ jQuery ->
       window.map?.locate(setView: true)
     else
       window.map?.fitBounds(window.markers.getBounds())
+  true
 class UserUpdater
   constructor: ->
   user_found: =>
