@@ -8,7 +8,6 @@ describe "admin" do
       visit admin_index_path
     end
     it "should display the admin panel" do
-      expect(page).to have_link("Coordinate Object Information")
       expect(page).to have_link("Setting Information")
     end
     context "when on the settings page" do
