@@ -57,6 +57,12 @@
         var success = function (position) {
           locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
         }
+        function onLocationFound(e) {
+          L.marker(e.latlng).addTo(map);
+        }
+ 
+        map.on('locationfound', onLocationFound);
+ 
         //Add click listener to map
         map.on('click drag', hideSidebar);
         window.sidebar = sidebar
@@ -68,13 +74,8 @@
             }
       },'Reset Map')
       }
-      function onLocationFound(e) {
-          L.marker(e.latlng).addTo(map);
-      }
- 
-      map.on('locationfound', onLocationFound);
-
       map = window.map
+
       sidebar = window.sidebar
       if(typeof window.markers !== 'undefined') {
         map.removeLayer(window.markers)
