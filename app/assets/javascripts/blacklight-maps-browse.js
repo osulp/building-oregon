@@ -53,21 +53,7 @@
           maximumAge: 0
         };
 
-        // Creates the marker at the default location
-        if(navigator.geolocation) {
-          var  locationMarker = new L.Marker([44.5649730045019, -123.275924921036], {icon: locationIcon}).addTo(map)
-        }
-        // Puts the marker on the map if the get location was successful
-        var success = function (position) {
-          locationMarker.setLatLng([position.coords.latitude, position.coords.longitude]);
-        }
-       // Gets the current location on map load
-       document.onload = getLocation();
-        function getLocation() {
-          if(navigator.geolocation) {
-            navigator.geolocation.watchPosition(success, function () {}, opts);
-          }
-        }
+        // Gets the current location on map load
         //Add click listener to map
         map.on('click drag', hideSidebar);
         window.sidebar = sidebar
