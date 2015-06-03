@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe BuildingOregon::FieldSanitizer do
   let(:field) { "desc_metadata__creatorDisplay_llsim" }
   let(:sanitizer) { described_class.new(field) }
-  let(:field_2) { "desc_metadata__viewdate_ssm" }
+  let(:field_2) { "desc_metadata__viewDate_ssm" }
 
   context "#to_s" do
     before do
