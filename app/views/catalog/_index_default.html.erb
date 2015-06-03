@@ -1,7 +1,9 @@
 <div class="row">
   <dl class="document-metadata dl-horizontal dl-invert">
     <div class="col-md-2 col-sm-2">
-      <img class="thumbnail" src='<%= document.photo_path %>'>
+      <a href="<%= catalog_path(document.id) %>">
+        <img class="thumbnail" src='<%= document.photo_path %>'>
+      </a>
     </div>
     <div class="col-md-10 col-sm-10">
       <%= render :partial => "index_fields", :locals => {document:document} %>

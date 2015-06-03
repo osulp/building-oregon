@@ -10,8 +10,9 @@ Facets:
 
 Index:
   creator: 'desc_metadata__creator_sim'
-  material: 'desc_metadata__material_ssm'
-  date: 'desc_metadata__temporal_ssm'
+  street address: 'desc_metadata__streetaddress_ssm'
+  photographer: 'desc_metadata__photographer_label_ssm'
+  date: 'desc_metadata__date_ssm'
 
 Exceptions:
   ["reviewed_ssim", "has_thumbnail_bs", "system_create_dtsi", "system_modified_dtsi",
