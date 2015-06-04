@@ -1,0 +1,18 @@
+<h1>Contact Us</h1>
+<div class="container">
+  <div class="row">
+    <% if Setting.contact.blank? %>
+
+    <% else %>
+      <%= raw Setting.contact %>
+    <% end %> 
+    <div class='column-settings-12-9'>
+      <br>
+      <%= simple_form_for "Contact", :url => contact_path do |f| %>
+        <%= f.input :email, input_html: { :value => @email } %>
+        <%= f.input :message, :as => :text, :input_html => {:value => @message } %>
+        <%= f.button :submit, "Submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

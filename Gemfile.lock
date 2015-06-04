@@ -369,6 +369,7 @@ DEPENDENCIES
   blacklight
   blacklight-maps
   capistrano (~> 2.0)
+  capybara
   carrierwave
   coffee-rails
   coveralls
