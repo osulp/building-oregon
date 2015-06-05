@@ -19,7 +19,8 @@ module BuildingOregon
     end
 
     def map_multiword_field
-      @field = multi_word_fields[@field] if multi_word_fields.key?(@field) 
+      @new_field = multi_word_fields[@field] if multi_word_fields.key?(@field) 
+      @field.gsub!(@field, @new_field) unless @new_field.nil?
     end
 
     def remove_format
@@ -34,7 +35,7 @@ module BuildingOregon
         "ispartof" => "Is part of",
         "rightsholder" => "Rights Holder",
         "styleperiod" => "Style Period",
-        "viewdate" => "View Date",
+        "viewDate" => "View Date",
       }
     end
 

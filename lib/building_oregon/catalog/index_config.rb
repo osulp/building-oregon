@@ -7,7 +7,7 @@ module BuildingOregon
           config.index.title_field = "desc_metadata__title_ssim"
 
           METADATA["Index"].each_pair do |field, metadata|
-            config.add_index_field metadata, :label => field
+            config.add_index_field metadata, :label => field.titleize, :helper_method => :controlled_index_label
           end
         end
       end

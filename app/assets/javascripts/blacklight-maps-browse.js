@@ -172,7 +172,7 @@
         html += val;
         html += "</ul>";
       });
-      return html;
+      return html.replace("\n\n\n,","");
     }
 
     // Generates placenames object
