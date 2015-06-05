@@ -3,7 +3,6 @@ class ContactMailer < ActionMailer::Base
   def contact_email(email, message)
     @email = email
     @message = message
-    binding.pry
     if Setting.contact.blank?
       mail(:to => "margaret.mellinger@oregonstate.edu" , :subject => "General Inquiry", :from => @email)
     else
