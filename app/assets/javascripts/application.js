@@ -17,7 +17,6 @@
 //= require footer
 //
 //Required for toggling button glyphicon/slide-toggle-button
-//= require toggleGlyphicon
 //= require slide_button_toggle
 //= require toggle-tabs
 //
