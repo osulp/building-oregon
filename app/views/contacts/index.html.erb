@@ -1,0 +1,13 @@
+<h1>Contact Us</h1>
+<div class="container">
+  <div class="row">
+    <div class='column-settings-12-9'>
+      <br>
+      <%= simple_form_for @contact, :url => contact_path do |f| %>
+        <%= f.input :email %>
+        <%= f.input :message %>
+        <%= f.button :submit, "Submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -21,7 +21,7 @@ gem 'blacklight-maps'
 #For text editing
 gem 'tinymce-rails', '4.0.11'
 gem 'passenger'
-
+gem 'capybara'
 group :development do
 gem 'spring'
 gem 'spring-commands-rspec'

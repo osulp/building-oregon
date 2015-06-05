@@ -1,7 +1,6 @@
 Contact:
   tag_attributes:
-    type: text
-    class: tinymce
+    type: string
     default: ""
 About:
   tag_attributes:
