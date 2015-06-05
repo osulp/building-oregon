@@ -4,6 +4,10 @@ class SettingDecorator < Draper::Decorator
   def type
     tag_attributes["type"]
   end
+  
+  def css_class
+    tag_attributes["class"]
+  end
 
   private
 
