@@ -19,10 +19,14 @@ class ContactsController < ApplicationController
 
   def mailer
     if Setting.contact.blank?
-      ContactMailer.contact_email(@email, @message, I18n.t('mailer.default_email')) 
+      contact_mailer.contact_email(@email, @message, I18n.t('mailer.default_email')) 
     else
-      ContactMailer.contact_email(@email, @message, Setting.contact) 
+      contact_mailer.contact_email(@email, @message, Setting.contact) 
     end
+  end
+
+  def contact_mailer
+    ContactMailer
   end
 
   def contact_params
