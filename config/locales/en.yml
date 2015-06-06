@@ -1,4 +1,4 @@
 en:
   hello: "Hello world"
-  mailer:
-    default_email: "margaret.mellinger@oregonstate.edu"
+  mail_error: "Please enter an email address and try again" 
+  mail_success: "Thank you for contacting us!"

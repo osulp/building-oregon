@@ -7,11 +7,11 @@ class ContactsController < ApplicationController
   def create
     @contact = ContactEmail.new(contact_params)
     unless @contact.valid?
-      flash[:error] = "Please enter an email address and try again"
+      flash[:error] = t('mail_error')
       render :index
     else
       if @contact.deliver
-        flash[:success] = "Thank you for contacting us!"
+        flash[:success] = t('mail_success')
       end
       redirect_to root_path
     end

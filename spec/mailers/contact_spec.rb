@@ -44,12 +44,6 @@ describe "Contact Us" do
       end
     end
     context "when an email has not been configured in the settings" do
-      let(:setting){create(:setting, :setting_name => 'Contact', :value => '')}
-
-      before do
-        setting
-      end
-      
       context "and the form is filled out correctly" do
         before do
           correct_form
