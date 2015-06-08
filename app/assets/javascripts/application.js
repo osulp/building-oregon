@@ -18,6 +18,7 @@
 //
 //Required for toggling button glyphicon/slide-toggle-button
 //= require slide_button_toggle
+//= unfocus_search_bar
 //= require toggle-tabs
 //
 //Required for Popout to work
