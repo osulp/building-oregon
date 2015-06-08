@@ -171,7 +171,7 @@
         html += "<ul class='sidebar-list'>";
         html += val;
         html += "</ul>";
-        html = html.replace("\n\n,","");
+        html = html.replace(/\n,/g,"");
       });
       return html;
     }
