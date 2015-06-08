@@ -18,10 +18,6 @@ class ContactEmail
   end
 
   def contact
-    if Setting.contact.blank?
-      I18n.t('mailer.default_email')
-    else
-      Setting.contact
-    end
+    Setting.contact
   end
 end

@@ -1,7 +1,7 @@
 Contact:
   tag_attributes:
     type: string
-    default: ""
+    default: "margaret.mellinger@oregonstate.edu"
 About:
   tag_attributes:
     type: text
