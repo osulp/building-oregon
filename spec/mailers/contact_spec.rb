@@ -9,7 +9,7 @@ describe "Contact Us" do
   context "when viewing the contact us page" do
     before do
       visit root_path 
-      click_link "Contact Us"
+      click_link "Contact"
     end
 
     it "should display the proper forms" do
