@@ -10,3 +10,8 @@ h3 {
 h1 {
   font-size: 25px;
 }
+@media(max-height: 992px){
+  #documents.map {
+    padding-top: 0px;
+  }
+}

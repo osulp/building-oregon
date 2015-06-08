@@ -17,21 +17,24 @@
   }
   .logos {
     *:first-child {
+      padding-top: 3px;
       text-align: left;
     }
     *:last-child {
+      padding-top: 8px; 
       text-align: right;
     }
   }
 }
 @media(max-width: 992px) {
   .logos {
-    *:first-child {
+    *:first-child a{
       display: none;
     }
-    *:last-child {
+    *:last-child a{
       display: none;
     }
+    margin-top: 36px;
   } 
   .left {
     float: left;
