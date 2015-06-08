@@ -171,9 +171,9 @@
         html += "<ul class='sidebar-list'>";
         html += val;
         html += "</ul>";
-        html = html.replace("\n,","");
+        html = html.replace(/\n,/g,"");
       });
-      return html 
+      return html;
     }
 
     // Generates placenames object
