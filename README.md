@@ -14,3 +14,9 @@ rake jetty:clean
 rake jetty:config
 rails s
 ```
+
+#Acknowedgements
+
+![BrowserStack](/app/assets/images/browserstack-logo.jpg)
+
+The development team uses <a href="http://browserstack.com" target="_blank">BrowserStack</a> for browser compatibility testing of <a href="http://buildingoregon.org" target="_blank">Building Oregon</a>
