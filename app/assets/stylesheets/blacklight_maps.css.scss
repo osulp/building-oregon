@@ -1,8 +1,11 @@
 /*
 *= require blacklight_maps/default
 */
+.view-type {
+  display: none;
+}
 #documents.map{
-  padding-top: 70px;
+  padding-top: 30px;
 }
 h3 {
   font-size: 15px;
