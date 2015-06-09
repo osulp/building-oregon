@@ -167,13 +167,12 @@
     function buildList(placenames){
       var html = "";
       var href = "";
-      $.each(placenames, function(i,val){
-        html += "<ul class='sidebar-list'>";
-        html += val;
-        html += "</ul>";
-        html = html.replace("\n,","");
+      $.each(placenames, function(key, array){
+        $.each(array, function(index, value){
+          html += value;
+        });
       });
-      return html 
+      return html;
     }
 
     // Generates placenames object
