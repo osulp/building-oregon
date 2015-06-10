@@ -29,12 +29,12 @@ module BuildingOregon
 
     def multi_word_fields
       {
-        "worktype" => "Work Type",
-        "streetaddress" => "Street Address",
-        "itemlocator" => "Item Locator",
-        "ispartof" => "Is part of",
-        "rightsholder" => "Rights Holder",
-        "styleperiod" => "Style Period",
+        "workType" => "Work Type",
+        "streetAddress" => "Street Address",
+        "itemLocator" => "Item Locator",
+        "isPartOf" => "Is part of",
+        "rightsHolder" => "Rights Holder",
+        "stylePeriod" => "Style Period",
         "viewDate" => "View Date",
       }
     end
