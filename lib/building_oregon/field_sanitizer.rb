@@ -19,6 +19,7 @@ module BuildingOregon
     end
 
     def map_multiword_field
+      binding.pry
       @new_field = multi_word_fields[@field] if multi_word_fields.key?(@field) 
       @field.gsub!(@field, @new_field) unless @new_field.nil?
     end
@@ -40,7 +41,7 @@ module BuildingOregon
     end
 
     def format_list
-      ["_ssim", "_sim", "_llsim", "_ssm", "label", "Display"]
+      ["_ssim", "_sim", "_llsim", "_ssm", "_label", "Display"]
     end
   end
 end
