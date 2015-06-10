@@ -19,7 +19,6 @@ module BuildingOregon
     end
 
     def map_multiword_field
-      binding.pry
       @new_field = multi_word_fields[@field] if multi_word_fields.key?(@field) 
       @field.gsub!(@field, @new_field) unless @new_field.nil?
     end
