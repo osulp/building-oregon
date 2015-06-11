@@ -9,8 +9,8 @@ Facets:
   decade: 'date_decade_ssim'
 
 Index:
-  creator: 'desc_metadata__creator_sim'
-  street address: 'desc_metadata__streetaddress_ssm'
+  creator: 'desc_metadata__creator_label_sim'
+  street address: 'desc_metadata__streetAddress_ssm'
   photographer: 'desc_metadata__photographer_label_ssm'
   date: 'desc_metadata__date_ssm'
 
