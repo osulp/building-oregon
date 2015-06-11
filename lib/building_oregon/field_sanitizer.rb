@@ -40,7 +40,7 @@ module BuildingOregon
     end
 
     def format_list
-      ["_ssim", "_sim", "_llsim", "_ssm", "label", "Display"]
+      ["_ssim", "_sim", "_llsim", "_ssm", "_label", "Display"]
     end
   end
 end
