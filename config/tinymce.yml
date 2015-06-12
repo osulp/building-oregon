@@ -6,6 +6,7 @@ default:
     - preview
     - code
     - contextmenu
+    - image
   toolbar:
     - undo
     - redo
@@ -24,4 +25,5 @@ default:
     - indent
     - link
     - forecolor
+    - image
   contextmenu: "preview code fullscreen"
