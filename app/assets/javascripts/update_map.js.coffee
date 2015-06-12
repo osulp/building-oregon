@@ -14,6 +14,7 @@ class UserUpdater
   constructor: ->
   user_found: =>
     @found = true
+    self.map_moved
   map_moved: (e) =>
     return unless @found == true
     bounds = window.map.getBounds()
