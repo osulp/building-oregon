@@ -12,6 +12,7 @@ bundle install
 rake db:migrate
 rake jetty:clean
 rake jetty:config
+rake data:mock
 rails s
 ```
 
