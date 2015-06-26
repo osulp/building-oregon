@@ -22,6 +22,7 @@ gem 'blacklight-maps'
 gem 'tinymce-rails', '4.0.11'
 gem 'passenger'
 gem 'capybara'
+gem 'capybara-screenshot', :group => :test
 group :development do
 gem 'spring'
 gem 'spring-commands-rspec'
