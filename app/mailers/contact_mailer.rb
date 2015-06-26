@@ -3,6 +3,6 @@ class ContactMailer < ActionMailer::Base
     @email = email
     @message = message
     @to_email = to_email
-    mail(:to => @to_email, :subject => "General Inquiry", :from => @email)
+    mail(:to => @to_email, :subject => "Building Oregon General Inquiry", :from => @email)
   end
 end

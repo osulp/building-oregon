@@ -1,6 +1,7 @@
 .links {
   p{
     color: white; 
+    margin-top: 50px;
   }
   a {
     color: white;
@@ -12,16 +13,24 @@
 
 
 #dynamicFooter {
+  margin-top: 20px;
+  padding-bottom: 20px;
   .links {
     text-align: center;
   }
   .logos {
+    .small_image {
+      height: 100%;
+      width: 100%;
+    }
     *:first-child {
-      padding-top: 3px;
-      text-align: left;
+      padding-top: 15px;
+      padding-bottom: 8px;
+      text-align: right;
     }
     *:last-child {
-      padding-top: 8px; 
+      padding-top: 15px; 
+      padding-bottom: 8px; 
       text-align: right;
     }
   }
@@ -32,6 +41,9 @@
       display: none;
     }
     *:last-child a{
+      display: none;
+    }
+    .small_image {
       display: none;
     }
     margin-top: 36px;
