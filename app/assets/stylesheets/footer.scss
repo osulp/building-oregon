@@ -36,6 +36,7 @@
 }
 @media(max-width: 992px) {
   .logos {
+    display: none;
     *:first-child a{
       display: none;
     }
