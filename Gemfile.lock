@@ -95,6 +95,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-screenshot (1.0.9)
+      capybara (>= 1.0, < 3)
+      launchy
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -182,6 +185,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     leaflet-markercluster-rails (0.7.0)
       railties (>= 3.1)
     leaflet-rails (0.7.3)
@@ -370,6 +375,7 @@ DEPENDENCIES
   blacklight-maps
   capistrano (~> 2.0)
   capybara
+  capybara-screenshot
   carrierwave
   coffee-rails
   coveralls
