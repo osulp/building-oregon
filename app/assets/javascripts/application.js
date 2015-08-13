@@ -40,5 +40,6 @@
 //= require blacklight-maps
 //= require blacklight-maps-browse
 //= require bootstrap/tab
+//= require google_analytics
 //
 //= require_tree .
