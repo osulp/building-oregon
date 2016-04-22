@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   
   def create
     @contact = ContactEmail.new(contact_params)
-    unless @contact.valid?
+    unless @contact.valid? && verify_recaptcha(:model => @contact)
       flash[:error] = t('mail_error')
       render :index
     else
