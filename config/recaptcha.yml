@@ -1,0 +1,4 @@
+recaptcha:
+  public_key: <%= ENV['RECAPTCHA_PUBLIC_KEY'] || "aasdfjklasjdhfkjhekheuhskb393urfhk" %>
+  private_key: <%= ENV['RECAPTCHA_PRIVATE_KEY'] || "aasdfjklasjdhfkjhekheuhskb393urfhk" %>
+

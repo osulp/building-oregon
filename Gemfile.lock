@@ -277,6 +277,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.4.2)
+    recaptcha (1.3.0)
+      json
     recipient_interceptor (0.1.2)
       mail
     request_store (1.1.0)
@@ -395,6 +397,7 @@ DEPENDENCIES
   poltergeist
   rack-timeout
   rails (~> 4.1)
+  recaptcha
   recipient_interceptor
   rspec-rails (~> 2.14.0)
   sass-rails (~> 4.0.3)
@@ -410,3 +413,6 @@ DEPENDENCIES
   uglifier
   unicorn
   webmock
+
+BUNDLED WITH
+   1.11.2
