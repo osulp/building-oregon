@@ -25,6 +25,7 @@ gem 'capybara'
 gem 'capybara-screenshot', :group => :test
 gem "recaptcha", require: "recaptcha/rails"
 gem 'capistrano', '~> 2.0'
+gem 'rake', '< 11.0'
 
 group :development do
 gem 'spring'
