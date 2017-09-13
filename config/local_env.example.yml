@@ -1,0 +1,10 @@
+BUILDINGOREGON_ADAPTER: needtochangethis
+BUILDINGOREGON_DB: needtochangethis
+BUILDINGOREGON_DB_USERNAME: needtochangethis
+BUILDINGOREGON_DB_PASSWORD: needtochangethis
+BUILDINGOREGON_DB_HOST: needtochangethis
+BUILDINGOREGON_DB_PORT: needtochangethis
+BUILDING_OREGON_SOLR_URL: needtochangethis
+BO_SECRET_KEY_BASE: needtochangethis
+RECAPTCHA_PUBLIC_KEY: needtochangethis
+RECAPTCHA_PRIVATE_KEY: needtochangethis
