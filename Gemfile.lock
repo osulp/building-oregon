@@ -246,6 +246,7 @@ GEM
     pry-stack_explorer (0.4.9.1)
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
+    puma (3.10.0)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -394,6 +395,7 @@ DEPENDENCIES
   newrelic_rpm (>= 3.7.3)
   passenger
   poltergeist
+  puma (~> 3.0)
   rack-timeout
   rails (~> 4.1)
   rake (= 11.1.0)

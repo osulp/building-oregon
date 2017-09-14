@@ -8,6 +8,17 @@ Bundler.require(*Rails.groups)
 
 module BuildingOregon
   class Application < Rails::Application
+
+    # load and inject local_env.yml key/values into ENV
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_env.yml')
+      if File.exist?(env_file)
+        YAML.safe_load(File.open(env_file)).each do |key, value|
+          ENV[key.to_s] = value
+        end
+      end
+    end
+
     config.i18n.enforce_available_locales = true
 
     config.active_record.default_timezone = :utc
