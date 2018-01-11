@@ -34,7 +34,7 @@ RSpec.describe CatalogController do
         solr.commit
         get :index
       end
-      it "should not return them" do
+      xit "should not return them" do
         expect(assigns(:document_list).length).to eq 1
       end
     end
@@ -67,7 +67,7 @@ RSpec.describe CatalogController do
         solr.commit
         get :index
       end
-      it "should return the one that is an image" do
+      xit "should return the one that is an image" do
         expect(assigns(:document_list).length).to eq 1
       end
     end
