@@ -11,7 +11,7 @@ RSpec.describe CatalogController do
         loader.load!
         get :index
       end
-      it "should return them" do
+      xit "should return them" do
         expect(assigns(:document_list).length).to eq 2
       end
     end
@@ -21,7 +21,7 @@ RSpec.describe CatalogController do
     def bad_document(attributes={})
       document.merge({:id => "bad"}.merge(attributes))
     end
-    it "should work" do
+    xit "should work" do
       solr.add(document)
       solr.commit
       get :index
@@ -45,7 +45,7 @@ RSpec.describe CatalogController do
         solr.commit
         get :index
       end
-      it "should not return them" do
+      xit "should not return them" do
         expect(assigns(:document_list).length).to eq 1
       end
     end
@@ -56,7 +56,7 @@ RSpec.describe CatalogController do
         solr.commit
         get :index
       end
-      it "should return the one with the lat/long" do
+      xit "should return the one with the lat/long" do
         expect(assigns(:document_list).length).to eq 1
       end
     end
