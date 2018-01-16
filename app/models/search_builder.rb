@@ -8,7 +8,7 @@ class SearchBuilder < Blacklight::SearchBuilder
 
   def only_images(solr_parameters)
     solr_parameters[:fq] ||= []
-    solr_parameters[:fq] << "desc_metadata__format_sim:\"http://purl.org/NET/mediatypes/image/tiff\" OR desc_metadata__format_sim:\"http://purl.org/NET/mediatypes/image/jpeg\""
+    solr_parameters[:fq] << "desc_metadata__format_sim:\"https://w3id.org/spar/mediatype/image/tiff\" OR desc_metadata__format_sim:\"https://w3id.org/spar/mediatype/image/jpeg\" OR -desc_metadata__format_sim:\"https://w3id.org/spar/mediatype/application/pdf\""
   end
 
   def only_building_oregon(solr_parameters)
