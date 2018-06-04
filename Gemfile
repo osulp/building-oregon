@@ -22,7 +22,7 @@ gem 'blacklight-maps', '0.1.0'
 gem 'tinymce-rails', '4.0.11'
 gem 'passenger'
 gem 'capybara', '2.4.3'
-gem 'capybara-screenshot', :group => :test
+gem 'capybara-screenshot', '1.0.9', :group => :test
 gem "recaptcha", '1.3.0', require: "recaptcha/rails"
 gem 'capistrano', '~> 2.0'
 gem 'rake', '11.1.0'
