@@ -4,7 +4,7 @@ gem 'email_validator'
 gem 'jquery-rails'
 gem 'sqlite3'
 gem 'rack-timeout'
-gem 'rails', '~> 4.1'
+gem 'rails', '~> 4.2.0'
 gem 'recipient_interceptor'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form', '3.1.0.rc2'
@@ -17,7 +17,7 @@ gem 'draper', '~> 1.3'
 #Carrierwave and Rmagick for photo viewing and storage
 gem 'carrierwave'
 #Blacklight maps for mapping art pieces
-gem 'blacklight-maps'
+gem 'blacklight-maps', '0.1.0'
 #For text editing
 gem 'tinymce-rails', '4.0.11'
 gem 'passenger'
