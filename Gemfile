@@ -36,7 +36,7 @@ end
 group :development, :test do
 gem 'awesome_print'
 #gem 'jazz_hands', :github => "terrellt/jazz_hands"
-gem 'factory_bot'
+gem 'factory_girl_rails'
 gem 'rspec-rails', '~> 2.14.0'
 # Test Coverage
 gem 'coveralls', :require => false
