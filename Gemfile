@@ -17,7 +17,7 @@ gem 'draper', '~> 1.3'
 #Carrierwave and Rmagick for photo viewing and storage
 gem 'carrierwave'
 #Blacklight maps for mapping art pieces
-gem 'blacklight-maps', '0.4.0'
+gem 'blacklight-maps', '0.1.0'
 #For text editing
 gem 'tinymce-rails', '4.0.11'
 gem 'passenger'

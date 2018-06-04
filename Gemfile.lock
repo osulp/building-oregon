@@ -70,11 +70,12 @@ GEM
       rails (>= 4.2, < 6)
       rsolr (>= 1.0.6, < 3)
       twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
-    blacklight-maps (0.4.0)
-      blacklight (>= 5.12.0)
-      bootstrap-sass (~> 3.2)
+    blacklight-maps (0.1.0)
+      blacklight (>= 5.1.0)
+      bootstrap-sass (~> 3.0)
       leaflet-markercluster-rails
       leaflet-rails
+      leaflet-sidebar-rails (~> 0.0.2)
       rails
     bootstrap-sass (3.3.5)
       autoprefixer-rails (>= 5.0.0.1)
@@ -207,6 +208,7 @@ GEM
       railties (>= 3.1)
     leaflet-rails (1.3.1)
       rails (>= 4.2.0)
+    leaflet-sidebar-rails (0.0.3)
     logger (1.2.8)
     loofah (2.2.2)
       crass (~> 1.0.2)
@@ -397,7 +399,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   blacklight
-  blacklight-maps (= 0.4.0)
+  blacklight-maps (= 0.1.0)
   capistrano (~> 2.0)
   capybara
   capybara-screenshot
