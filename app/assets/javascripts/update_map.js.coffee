@@ -22,12 +22,20 @@ class UserUpdater
     north_east = bounds._northEast
     if @frameRequest?
       @frameRequest.abort()
-    @frameRequest = $.getJSON("/geo/frame", $.extend({}, {southwest: "#{south_west.lat},#{south_west.lng}", northeast: "#{north_east.lat},#{north_east.lng}"}, this.current_params()), this.update_frame)
+    @frameRequest = $.getJSON("/geo/frame", $.extend({}, {southwest: "#{south_west.lat},#{south_west.lng}", northeast: "#{north_east.lat},#{north_east.lng}"}, JSON.parse(this.current_params())), this.update_frame)
   current_params: ->
     param_string = unescape(window.location.search.replace("?", "")).replace(/\+/g, " ")
+    has_json = false
+    pieces = param_string.split "="
+    for arg in pieces
+     try
+       JSON.parse(arg)
+       has_json = true
+     catch error
+       has_json = false
     clean_string = decodeURI(param_string.replace(/&/g, "\",\"").replace(/\=/g,"\":\""))
-    if clean_string != ""
-      JSON.parse('{"' + clean_string + '"}')
+    if clean_string != "" && !has_json
+      '{"' + clean_string + '"}'
     else
       {}
   set_coordinates: (coordinates) ->
