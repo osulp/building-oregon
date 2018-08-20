@@ -27,33 +27,34 @@ gem "recaptcha", require: "recaptcha/rails"
 gem 'capistrano', '~> 2.0'
 gem 'rake', '11.1.0'
 gem 'puma', '~> 3.0'
+gem 'ddtrace'
 
 group :development do
-gem 'spring'
-gem 'spring-commands-rspec'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
-gem 'awesome_print'
-gem 'jazz_hands', :github => "terrellt/jazz_hands"
-gem 'factory_girl_rails'
-gem 'rspec-rails', '~> 2.14.0'
-# Test Coverage
-gem 'coveralls', :require => false
-gem 'simplecov'
+  gem 'awesome_print'
+  gem 'jazz_hands', :github => "terrellt/jazz_hands"
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.14.0'
+  # Test Coverage
+  gem 'coveralls', :require => false
+  gem 'simplecov'
 end
+
 group :test do
-gem 'poltergeist'
-gem 'database_cleaner'
-gem 'formulaic'
-gem 'shoulda-matchers', require: false
-gem 'timecop'
-gem 'webmock'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'formulaic'
+  gem 'shoulda-matchers', require: false
+  gem 'timecop'
+  gem 'webmock'
 end
 
 group :staging, :production do
-gem 'newrelic_rpm', '>= 3.7.3'
-gem 'mysql2'
+  gem 'mysql2', '~> 0.3.21'
 end
 
 gem "jettywrapper", "~> 1.7"
