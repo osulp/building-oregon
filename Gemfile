@@ -10,14 +10,14 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form', '3.1.0.rc2'
 gem 'uglifier'
 gem 'unicorn'
-gem 'blacklight'
+gem 'blacklight', '~> 6.1'
 gem 'sunspot_rails'
 # Draper for decoration.
 gem 'draper', '~> 1.3'
 #Carrierwave and Rmagick for photo viewing and storage
 gem 'carrierwave'
 #Blacklight maps for mapping art pieces
-gem 'blacklight-maps'
+gem 'blacklight-maps', '~> 0.5.0'
 #For text editing
 gem 'tinymce-rails', '4.0.11'
 gem 'passenger'
@@ -27,7 +27,6 @@ gem "recaptcha", require: "recaptcha/rails"
 gem 'capistrano', '~> 2.0'
 gem 'rake', '11.1.0'
 gem 'puma', '~> 3.0'
-gem 'ddtrace'
 
 group :development do
   gem 'spring'
@@ -54,6 +53,7 @@ group :test do
 end
 
 group :staging, :production do
+  gem 'ddtrace'
   gem 'mysql2', '~> 0.3.21'
 end
 

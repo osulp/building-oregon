@@ -7,7 +7,6 @@ Rails.application.load_tasks
 task(:default).clear
 task :default => [:spec]
 
-ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.9.0.zip"
-require 'jettywrapper'
-
-require 'solr_wrapper/rake_task' unless Rails.env.production?
+#IP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.9.0.zip"
+#require 'jettywrapper'
+#require 'solr_wrapper/rake_task' unless Rails.env.production?

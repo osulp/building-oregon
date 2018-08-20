@@ -13,12 +13,12 @@ services:
   ##
   # Run SOLR, precreating a core related to the RAILS_ENV currently set, persists data across sessions in a named volume.
   solr:
-    image: solr:6
+    image: solr:5
     expose:
       - 8983
     volumes:
-      - solr:/opt/solr/server/solr/mycores
-      - ./solr/conf:/opt/solr/server/solr/mycores/blacklight-core/conf
+      - solr:/opt/solr/server/solr
+      - ./solr/conf:/opt/solr/server/solr/blacklight-core
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
