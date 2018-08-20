@@ -9,3 +9,5 @@ task :default => [:spec]
 
 ZIP_URL = "https://github.com/projectblacklight/blacklight-jetty/archive/v4.9.0.zip"
 require 'jettywrapper'
+
+require 'solr_wrapper/rake_task' unless Rails.env.production?
