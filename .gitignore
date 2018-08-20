@@ -25,3 +25,5 @@
 /config/config.yml
 /config/god.conf
 docker-compose.override.yml
+
+.vscode/*
