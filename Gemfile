@@ -20,7 +20,7 @@ gem 'carrierwave'
 gem 'blacklight-maps'
 #For text editing
 gem 'tinymce-rails', '4.0.11'
-gem 'passenger'
+gem 'passenger', '5.1.0'
 gem 'capybara'
 gem 'capybara-screenshot', :group => :test
 gem "recaptcha", require: "recaptcha/rails"
